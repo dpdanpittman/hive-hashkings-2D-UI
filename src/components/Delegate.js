@@ -58,7 +58,7 @@ export default function Delegate({username, delegation, updateDelegation}) {
     const delegatee = "hashkings";
     const newAmount = totalPlots + amount;
     const amountStr = (20 * newAmount).toString() + ".000";
-    const unit = "SP";
+    const unit = "HP";
 
     if (hasSteemKeychain()) {
       const steem_keychain = window.steem_keychain;

@@ -43,7 +43,7 @@ export default function BuyGarden({
       setIsSubmitting(true);
       const memo = `${garden.id} manage`;
       const amount = "0.500";
-      const currency = "STEEM";
+      const currency = "HIVE";
       const to = "hashkings";
 
       if (hasSteemKeychain()) {

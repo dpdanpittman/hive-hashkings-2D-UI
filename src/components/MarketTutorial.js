@@ -13,7 +13,6 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 import Divider from '@material-ui/core/Divider';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
@@ -137,7 +136,7 @@ export const MarketPlots = () => {
                   title={
                     <React.Fragment>
                       <Typography color="error" className={classes.font}><u>Delegate for a plot</u></Typography>
-                      <em><a href="/market/seedbank">{"Get your farm plots here"}</a></em> <b>{"Each Plot requires a 20 STEEM Power delegation"}</b>
+                      <em><a href="/market/seedbank">{"Get your farm plots here"}</a></em> <b>{"Each Plot requires a 20 Hive Power delegation"}</b>
                     </React.Fragment>
                   }
                   placement="right"
@@ -189,7 +188,7 @@ export const MarketPlots = () => {
       <Paper className={classes.paper}>
       <Typography paragraph className={classes.font}>
         <font color="DFB17B">Here is where you get yourself some land to grow on.  Each time you
-        would like to get a plot you will need to delegate 20 STEEM Power.  Learn more about delegation <a href="https://steempeak.com/steemit/@katerinaramm/what-is-steem-power-delegation">here</a>
+        would like to get a plot you will need to delegate 20 Hive Power.  Learn more about delegation <a href="https://steempeak.com/steemit/@katerinaramm/what-is-Hive-power-delegation">here</a>
         </font>
       </Typography>
       <Typography paragraph className={classes.font}>

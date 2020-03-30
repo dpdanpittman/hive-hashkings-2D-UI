@@ -145,7 +145,7 @@ export default function TradingFloor() {
       const memo = `papers`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -197,7 +197,7 @@ export default function TradingFloor() {
       const memo = `bluntwraps`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -249,7 +249,7 @@ export default function TradingFloor() {
       const memo = `kiefbox`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -301,7 +301,7 @@ export default function TradingFloor() {
       const memo = `hempwraps`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -353,7 +353,7 @@ export default function TradingFloor() {
       const memo = `vacoven`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -405,7 +405,7 @@ export default function TradingFloor() {
       const memo = `hempwraps`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -483,16 +483,16 @@ export default function TradingFloor() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          Steem OG
+          HIVE OG
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
-          Steem OG is a hybrid created by @jonyoudyer, founder of @canna-curate in Central California.
+          HIVE OG is a hybrid created by @jonyoudyer, founder of @canna-curate in Central California.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
       <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/steem-og" color="error">
+      <Link component={Link1} to="/seeds/HIVE-og" color="error">
           Seeds
         </Link>
         </Button>
@@ -1222,7 +1222,7 @@ export default function TradingFloor() {
           </Typography>
           <br/>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
-          <b>Choose below! Each item costs 5 STEEM</b>
+          <b>Choose below! Each item costs 5 HIVE</b>
           </Typography>
         </CardContent>
       </CardActionArea>

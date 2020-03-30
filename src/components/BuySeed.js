@@ -20,7 +20,7 @@ export default function BuySeed({type}) {
       const memo = `${type}seed ${seed.id}`;
       const to = "hashkings";
       const amount = seedTypes[type].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;

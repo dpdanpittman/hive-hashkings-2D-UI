@@ -71,7 +71,7 @@ export const MarketSeeds = () => {
           </Typography>
           <br/>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
-          <font color="DFB17B"><b>Price: 5 STEEM</b></font>
+          <font color="DFB17B"><b>Price: 5 Hive</b></font>
           </Typography>
               <label htmlFor="multiselect" />
             <BuySeed type="t" />
@@ -86,9 +86,9 @@ export const MarketSeeds = () => {
       </Typography>
       <Typography paragraph className={classes.font}>
         <font color="DFB17B">With these seeds it is possible to grow plants, 
-        create new seeds and earn STEEM. Unlike our in-game currency Kief(KFQ), 
+        create new seeds and earn Hive. Unlike our in-game currency Kief(KFQ), 
         seeds are custom designed tokens by @disregardfiat and only available within our ecosystem, 
-        NOT tradable on Steem-Engine.</font>
+        NOT tradable on Hive-Engine.</font>
       </Typography>
       <Typography paragraph className={classes.font}>
         <font color="DFB17B">Original first round of seeds, purchased in the Hashkings Seed Bank or bought from other players. 

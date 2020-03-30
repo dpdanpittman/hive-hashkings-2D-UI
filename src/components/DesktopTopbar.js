@@ -197,7 +197,7 @@ export default function DesktopTopbar(){
             <HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}>What is STEEM?</Typography>
+                  <Typography color="error" className={classes.font}>What is HIVE?</Typography>
                 </React.Fragment>
               }
               placement="top"

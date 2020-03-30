@@ -133,7 +133,7 @@ export const MarketPlotsTwo = () => {
       <Grid item xs={8}>
       <Paper className={classes.paper}>
       <Typography paragraph className={classes.font}>
-        <font color="DFB17B">In order to start growing on your plot you will need to a pay a one time leasing fee of 0.5 STEEM.
+        <font color="DFB17B">In order to start growing on your plot you will need to a pay a one time leasing fee of 0.5 Hive.
         </font>
       </Typography>
       <Typography paragraph className={classes.font}>
@@ -150,7 +150,7 @@ export const MarketPlotsTwo = () => {
                   title={
                     <React.Fragment>
                       <Typography color="error" className={classes.font}><u>Leasing</u></Typography>
-                      <em><a href="/market/seedbank">{"Claim your leased plots for 0.5 STEEM each."}</a></em><b>{" In order to claim your plots we require a small fee. Pay with STEEM below"}</b>
+                      <em><a href="/market/seedbank">{"Claim your leased plots for 0.5 Hive each."}</a></em><b>{" In order to claim your plots we require a small fee. Pay with Hive below"}</b>
                     </React.Fragment>
                   }
                   placement="left"
@@ -200,7 +200,7 @@ export const MarketPlotsTwo = () => {
               <p>
                 <font color="DFB17B">
                   <b>
-                    Please delegate more Steem Power above to lease a plot
+                    Please delegate more Hive Power above to lease a plot
                   </b>
                 </font>
               </p>

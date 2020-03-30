@@ -156,7 +156,7 @@ export const LoginPage = ({history}) => {
         {validatedTo && (
         <div>
           <img
-          alt="STEEM Avatar"
+          alt="HIVE Avatar"
           src={`https://steemitimages.com/u/${validatedTo}/avatar/small`}
           />
           </div>
@@ -188,7 +188,7 @@ export const LoginPage = ({history}) => {
           <Grid container>
             <Grid item>
               <Link href="https://signup.steemit.com/" variant="body2" className={classes.font}>
-                {"Don't have a STEEM account? Sign Up"}
+                {"Don't have a Hive account? Sign Up"}
               </Link>
             </Grid>
           </Grid>

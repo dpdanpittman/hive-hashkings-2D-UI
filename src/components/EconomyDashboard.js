@@ -241,8 +241,8 @@ if (username) {
                 <HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}><u>Total Steem Power Delegated</u></Typography>
-                  <em><a href="/market/seedbank">{"This is our total Economy"}</a></em> <b>{"This number is based on total SP delegated and STEEM powered up from Seed Sales"}</b>
+                  <Typography color="error" className={classes.font}><u>Total HIVE Power Delegated</u></Typography>
+                  <em><a href="/market/seedbank">{"This is our total Economy"}</a></em> <b>{"This number is based on total HP delegated and HIVE powered up from Seed Sales"}</b>
                 </React.Fragment>
               }
               placement="bottom-end"
@@ -256,7 +256,7 @@ if (username) {
                   <CardContent>
                     <center>
                       <Typography gutterBottom variant="h5" component="h1">
-                        <b><font color="DFB17B" className={classes.font}>Economy (SP)</font></b>
+                        <b><font color="DFB17B" className={classes.font}>Economy (HP)</font></b>
                       </Typography>
                       <Typography variant="h5" color="textSecondary" component="h2">
                       <b><font color="B28D43" className={classes.font}>{dashboardStats.delegation}</font></b>
