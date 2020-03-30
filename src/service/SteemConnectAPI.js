@@ -1,6 +1,6 @@
-import steemconnect from "steemconnect";
+import hivesigner from "hivesigner";
 
-const api = new steemconnect.Client({
+const api = new hivsigner.Client({
   app: "hive-loginking",
   baseURL: "https://hivesigner.com",
   callbackURL:
