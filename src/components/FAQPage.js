@@ -33,17 +33,17 @@ export const FAQPage = () => {
     return (
       <div className="card-blank-sand-3">
       <font color="#DFB17B">
-		  <h3><b>Hashkings is an independently developed game and decentralized application (dApp) running on the STEEM blockchain. 
-			The project officially started in October 2018 on the Ethereum blockchain but migrated to STEEM in January 2019 in an effort 
+		  <h3><b>Hashkings is an independently developed game and decentralized application (dApp) running on the HIVE blockchain. 
+			The project officially started in October 2018 on the Ethereum blockchain but migrated to HIVE in January 2019 in an effort 
 			to expand into a growing new platform.</b></h3></font>
       <font color="#DFB17B">
 			<h3><b>The development team consists of three core members: Daniel Pittman, Steven Ettinger and J. Rawsthorne. Their 
 			background experience includes Cannabis Cultivation, Ethereum Smart Contracts, Steemjs, Dlux VR, Node, Frontend and Backend api 
 			design.</b></h3></font>
       <font color="#DFB17B">
-			<h3><b>Designed to be a virtual Cannabis farming game that implements STEEM tokens on the blockchain, Hashkings intends to 
-			be educational as well as interactive. The internal game mechanics allow you to stake your STEEM in return for beneficiary 
-			rewards. These returns are generated through the STEEM blockchain rewards pool and paid out to players over time. This 
+			<h3><b>Designed to be a virtual Cannabis farming game that implements HIVE tokens on the blockchain, Hashkings intends to 
+			be educational as well as interactive. The internal game mechanics allow you to stake your HIVE in return for beneficiary 
+			rewards. These returns are generated through the HIVE blockchain rewards pool and paid out to players over time. This 
 			creates a micro-economy within the dApp that evolves and grows with the game itself.</b></h3>
       </font>
       <font color="#DFB17B">
@@ -63,7 +63,7 @@ export const FAQPage = () => {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-		  Hashkings is a virtual Cannabis farming game on the STEEM blockchain. 
+		  Hashkings is a virtual Cannabis farming game on the HIVE blockchain. 
 		  You can lease plots of land, buy seeds and grow your own plants which are then 
 		  harvested and sold at market. 
           </Typography>
@@ -81,7 +81,7 @@ export const FAQPage = () => {
           <Typography>
 			When farmers take care of their plants they grow points toward votes... 
 			distributing the inflation 
-			controlled by our collective Steem power. This is done by placing our growers as 
+			controlled by our collective HIVE power. This is done by placing our growers as 
 			beneficiaries on 
 			semi-automated posts, and then voting on these posts. 
 			Additionally, any extra game mechanics purchased contribute to our SP... 
@@ -102,7 +102,7 @@ export const FAQPage = () => {
         <ExpansionPanelDetails className={classes.text}>
           <Typography>
 		  Yes, there is an initial leasing fee and a 20 SP delegation for each plot
-			  seeds also cost a small amount of STEEM to purchase.
+			  seeds also cost a small amount of HIVE to purchase.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

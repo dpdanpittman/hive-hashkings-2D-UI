@@ -79,7 +79,7 @@ export const TutorialWelcome = () => {
       <Paper className={classes.paper}>
       <Typography paragraph>
         <font color="DFB17B" className={classes.font}>HashKings® is a Crypto Cannabis Farming and Trading Game, 
-        Curation Trail and Community on the STEEM Blockchain. Users delegate Steem Power, 
+        Curation Trail and Community on the HIVE Blockchain. Users delegate HIVE Power, 
         purchase seeds and propagate plants for daily rewards.</font>
       </Typography>
       <Typography paragraph>
@@ -87,7 +87,7 @@ export const TutorialWelcome = () => {
         strains, each with their own traits, sell them or use them to continue playing for free!</font>
       </Typography>
       <Typography paragraph>
-        <font color="DFB17B" className={classes.font}>A custom API powers Hashkings along with react.js and steem.js. 
+        <font color="DFB17B" className={classes.font}>A custom API powers Hashkings along with react.js and HIVE.js. 
         Start your journey to cannabis connoisseur today!</font>
       </Typography>
       <Typography paragraph>

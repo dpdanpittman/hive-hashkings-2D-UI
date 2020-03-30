@@ -147,7 +147,7 @@ export default function GiftSeed() {
                 className="form-input"
                 value={to}
                 onChange={e => setTo(e.target.value.trim())}
-                placeholder="STEEM user to send to"
+                placeholder="HIVE user to send to"
               />
             </ExpansionPanelDetails>
             <ExpansionPanelDetails>
@@ -213,7 +213,7 @@ export default function GiftSeed() {
           className="form-input"
           value={to}
           onChange={e => setTo(e.target.value.trim())}
-          placeholder="STEEM user to send to"
+          placeholder="HIVE user to send to"
         />
         </ExpansionPanelDetails>
         <ExpansionPanelDetails>
