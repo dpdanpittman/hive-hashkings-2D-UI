@@ -1,6 +1,6 @@
 import hivesigner from "hivesigner";
 
-const api = new hivsigner.Client({
+const api = new hivesigner.Client({
   app: "hive-loginking",
   baseURL: "https://hivesigner.com",
   callbackURL:
