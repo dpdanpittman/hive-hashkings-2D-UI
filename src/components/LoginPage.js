@@ -18,7 +18,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://www.hashkings.app">
+      <Link color="inherit" href="https://hive.hashkings.app">
         Qwoyn.io
       </Link>{' '}
       {new Date().getFullYear()}
@@ -122,8 +122,8 @@ export const LoginPage = ({history}) => {
 
   const loginLabelPrefix = loggingIn ? "Logging in with" : "Login with";
   const loginLabelSuffix = hasSteemKeychain()
-    ? "STEEM Keychain"
-    : "SteemConnect";
+    ? "Hive Keychain"
+    : "Hivesigner";
 
     const classes = useStyles();
 
@@ -169,7 +169,7 @@ export const LoginPage = ({history}) => {
             required
             fullWidth
             id="username"
-            label="STEEM Account"
+            label="Hive Account"
             value={username}
             autoFocus
             onChange={e => setUsername(e.target.value)}

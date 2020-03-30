@@ -1,8 +1,8 @@
-import steemconnect from "steemconnect";
+import hivesigner from "hivesigner";
 
-const api = new steemconnect.Client({
+const api = new hivesigner.Client({
   app: "loginking",
-  baseURL: "https://steemconnect.com",
+  baseURL: "https://hivesigner.com",
   callbackURL:
     process.env.REACT_APP_SC_CALLBACK || "http://localhost:3000/callback",
   scope: ["custom_json", "login"]

@@ -2,12 +2,12 @@ import {useState, useEffect} from "react";
 
 export default function() {
   const [hasKeychain, setHasKeychain] = useState(
-    window && window.steem_keychain
+    window && window.hive
   );
 
   useEffect(() => {
     window.onload = () => {
-      if (window && window.steem_keychain) {
+      if (window && window.hive) {
         setHasKeychain(true);
       }
     };
@@ -15,7 +15,7 @@ export default function() {
 
   function checkKeychain() {
     if (hasKeychain) return true;
-    if (window && window.steem_keychain) {
+    if (window && window.hive) {
       setHasKeychain(true);
       return true;
     } else {
