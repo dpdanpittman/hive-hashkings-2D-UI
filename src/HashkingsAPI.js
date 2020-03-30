@@ -393,7 +393,7 @@ export class HashkingsAPI {
         activeGardens: activeGardens.length,
         availableGardens: availableGardens.length,
         activity,
-        breeder: breederName,
+        breederName: breederName,
         delegation: delegationVestsToSteem,
         leaderboard
       };
@@ -461,22 +461,6 @@ export class HashkingsAPI {
       availableOil,
       totalxps,
       breederName,
-      headBlockNum: dgpo.head_block_number
-    };
-  }
-
-  async getUsersBuds(username) {
-    const [user, userBuds, dgpo] = await Promise.all([
-      this.getUser(username),
-      this.getUserBuds(username),
-      this.getDGPO()
-    ]);
-    const availableBuds = userBuds.filter(
-      buds => typeof buds === "object"
-    );
-
-    return {
-      availableBuds,
       headBlockNum: dgpo.head_block_number
     };
   }
