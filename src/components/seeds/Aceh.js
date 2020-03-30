@@ -17,7 +17,7 @@ import SwipeableViews from 'react-swipeable-views';
 import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
-import {sign} from "steemconnect";
+import {sign} from "hivesigner";
 import useSteemKeychain from "../../hooks/useSteemKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';

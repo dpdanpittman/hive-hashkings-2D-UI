@@ -3,7 +3,7 @@ import {Button} from "primereact/button";
 import {Dropdown} from "primereact/dropdown";
 import {seedNames, seedTypes} from "../service/HashkingsAPI";
 import {StateContext} from "../App";
-import {sign} from "steemconnect";
+import {sign} from "hivesigner";
 import useSteemKeychain from "../hooks/useSteemKeychain";
 
 export default function BuySeed({type}) {

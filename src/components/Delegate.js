@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "primereact/button";
 import {Spinner} from "primereact/spinner";
-import {sign} from "steemconnect";
+import {sign} from "hivesigner";
 import { makeStyles } from '@material-ui/core/styles';
 import useSteemKeychain from "../hooks/useSteemKeychain";
 import Paper from '@material-ui/core/Paper';

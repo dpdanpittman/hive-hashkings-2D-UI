@@ -4,7 +4,7 @@ import {StateContext} from "../App";
 import { Redirect } from 'react-router';
 import SwipeableViews from 'react-swipeable-views';
 import {seedTypes} from '../service/HashkingsAPI';
-import {sign} from "steemconnect";
+import {sign} from "hivesigner";
 import useSteemKeychain from "../hooks/useSteemKeychain"; 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';

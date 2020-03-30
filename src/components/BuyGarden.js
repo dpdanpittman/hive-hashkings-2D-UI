@@ -3,7 +3,7 @@ import {Button} from "primereact/button";
 import {Dropdown} from "primereact/dropdown";
 import {gardenNames} from "../service/HashkingsAPI";
 import useSteemKeychain from "../hooks/useSteemKeychain";
-import {sign} from "steemconnect";
+import {sign} from "hivesigner";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
