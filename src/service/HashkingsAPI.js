@@ -55,7 +55,7 @@ export class HashkingsAPI {
   getSteemAPI(method, params) {
     return axios
       .post(
-        "https://api.steemit.com",
+        "https://api.openhive.network",
         JSON.stringify({
           id: 0,
           jsonrpc: "2.0",
@@ -102,7 +102,7 @@ export class HashkingsAPI {
             steem_payout,
             sp_payout: `${(vesting_payout.split(" ")[0] * steemPerVest).toFixed(
               3
-            )} SP`,
+            )} HP`,
             timestamp,
             block
           };
@@ -511,7 +511,7 @@ export const seedNames = {
   ach: "Aceh",
   tha: "Thai",
   cht: "Chocolate Thai",
-  sog: "Steem OG"
+  sog: "HIVE OG"
 };
 
 export const pollenNames = {
@@ -531,7 +531,7 @@ export const pollenNames = {
   ach: "Aceh",
   tha: "Thai",
   cht: "Chocolate Thai",
-  sog: "Steem OG"
+  sog: "Hive OG"
 };
 
 export const seedTypes = {
@@ -553,7 +553,7 @@ export const seedTypes = {
   s: {
     num: 10000,
     str: "10.000",
-    name: "Steem OG"
+    name: "Hive OG"
   }
 };
 
@@ -583,5 +583,5 @@ export const seedLinkNames = {
   ach: "Aceh",
   tha: "Thai",
   cht: "Chocolate-Thai",
-  sog: "Steem-OG"
+  sog: "Hive-OG"
 };
