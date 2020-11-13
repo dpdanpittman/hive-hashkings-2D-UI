@@ -237,14 +237,14 @@ export default function Inventory({user}) {
     </Grid>
     <Grid item xs>
     <HtmlTooltip
-                  title={
-                    <React.Fragment>
-                      <Typography color="error" className={classes.font}><u>Available Plots</u></Typography>
-                      <em><a href="/market/seedbank">{"These plots are ready to go!"}</a></em> <b>{"Do you have extra Seeds?  These plots are available to be farmed."}</b>
-                    </React.Fragment>
-                  }
-                  TransitionComponent={Zoom}
-                  >
+        title={
+          <React.Fragment>
+            <Typography color="error" className={classes.font}><u>Available Plots</u></Typography>
+            <em><a href="/market/seedbank">{"These plots are ready to go!"}</a></em> <b>{"Do you have extra Seeds?  These plots are available to be farmed."}</b>
+          </React.Fragment>
+        }
+        TransitionComponent={Zoom}
+        >
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
