@@ -203,7 +203,7 @@ export default function DesktopTopbar(){
               placement="top"
               TransitionComponent={Zoom}
               >
-            <a href="https://steemit.com/faq.html" target="_default">    
+            <a href="https://hive.blog/faq.html" target="_default">    
             <IconButton className="layout-menu-button">
             <SteemSVGIcon />
             </IconButton>
