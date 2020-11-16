@@ -135,6 +135,7 @@ export const AcapulcoGold = () => {
   const [value, setValue] = React.useState(0);
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
+  const [acaPrice, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasSteemKeychain = useSteemKeychain();
 
@@ -146,14 +147,29 @@ export const AcapulcoGold = () => {
     setValue(index);
   };
 
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://etherchest-backend.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.prices.rseed / 1000;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
+
   const handleSubmit = async e => {
     e.preventDefault();
     if (username) {
       setIsSubmitting(true);
 
-      const memo = `tseed aca`;
+      const memo = `rseed aca`;
       const to = "hashkings";
-      const amount = seedTypes["t"].str;
+      const amount = acaPrice;
       const currency = "STEEM";
 
       if (hasSteemKeychain()) {
