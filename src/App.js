@@ -210,21 +210,10 @@ class App extends Component {
             to: "/trending"
           },
           {
-            label: "Twitch Streams",
-            to: "/streams"
-          },
-          {
-            label: "Curation Trail",
+            label: "Hive Blog",
             command: () => {
               /*window.location = "https://steem-engine.com/?p=market&t=KFQ";*/
-              window.open('https://steempeak.com/@hashkings/introducing-hashkings-curation-trail', '_blank');
-            }
-          },
-          {
-            label: "Steemit Hive",
-            command: () => {
-              /*window.location = "https://steem-engine.com/?p=market&t=KFQ";*/
-              window.open('https://beta.steemit.com/trending/hive-164881', '_blank');
+              window.open('https://peakd.com/@hashkings', '_blank');
             }
           },
           {
@@ -236,10 +225,6 @@ class App extends Component {
             }
           },
         ]
-      },
-      {
-        label: "Growers Association",
-        to: "/growers"
       },
       {
         label: "About",
