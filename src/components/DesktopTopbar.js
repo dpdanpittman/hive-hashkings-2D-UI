@@ -13,7 +13,8 @@ import {  FarmTopbarIcon,
           TutorialIcon,
           FunditionIcon,
           PatreonIcon, 
-          LandIcon } from './Icons';
+          LandIcon, 
+          HiveIcon} from './Icons';
 import Tooltip from '@material-ui/core/Tooltip';
 import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -205,7 +206,7 @@ export default function DesktopTopbar(){
               >
             <a href="https://hive.blog/faq.html" target="_default">    
             <IconButton className="layout-menu-button">
-            <SteemSVGIcon />
+            <HiveIcon />
             </IconButton>
             </a>
             </HtmlTooltip>
