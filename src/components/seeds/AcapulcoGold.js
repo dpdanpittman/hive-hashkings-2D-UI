@@ -135,7 +135,7 @@ export const AcapulcoGold = () => {
   const [value, setValue] = React.useState(0);
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
-  const [acaPrice, setAcaPrices] = useState([0]);
+  const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasSteemKeychain = useSteemKeychain();
 
@@ -169,7 +169,7 @@ export const AcapulcoGold = () => {
 
       const memo = `rseed aca`;
       const to = "hashkings";
-      const amount = acaPrice;
+      const amount = acaPrices;
       const currency = "STEEM";
 
       if (hasSteemKeychain()) {
@@ -330,7 +330,7 @@ export const AcapulcoGold = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b></font> {acaPrice}
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> {acaPrices}
               </Typography>
               <br/>
               <Button
