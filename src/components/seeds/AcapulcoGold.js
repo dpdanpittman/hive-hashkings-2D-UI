@@ -154,7 +154,7 @@ export const AcapulcoGold = () => {
     const response = await fetch(urlAPI);
     const pricedata = await response.json();
 
-    var acaPrice = pricedata.stats.prices.listed.prices.rseed / 1000;
+    var acaPrice = pricedata.stats.prices.listed.prices.seeds.reg / 1000;
     setAcaPrices(acaPrice);
   }
 
@@ -330,7 +330,7 @@ export const AcapulcoGold = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> {acaPrice}
               </Typography>
               <br/>
               <Button
