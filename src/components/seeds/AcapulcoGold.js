@@ -149,12 +149,12 @@ export const AcapulcoGold = () => {
 
   const loadPriceData = async () => {
     
-    const urlAPI = 'https://etherchest-backend.herokuapp.com/';
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
     
     const response = await fetch(urlAPI);
     const pricedata = await response.json();
 
-    var acaPrice = pricedata.stats.prices.listed.prices.seeds.reg / 1000;
+    var acaPrice = pricedata.stats.prices.listed.prices.seeds.reg;
     setAcaPrices(acaPrice);
   }
 
@@ -208,7 +208,7 @@ export const AcapulcoGold = () => {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/market/seedbank"
+            : "https://localhost:3000/market/seedbank"
         );
       }
     }
