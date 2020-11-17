@@ -35,7 +35,7 @@ export default function BuySeed({type}) {
 
       const memo = `${type}seed ${seed.id}`;
       const to = "hashkings";
-      const amount = acaPrices;
+      const amount = acaPrices.toFixed(3).toString();;
       const currency = "HIVE";
 
       if (hasHiveKeychain()) {

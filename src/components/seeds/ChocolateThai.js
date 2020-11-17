@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import SeedGifting from './SeedGifting';
@@ -101,7 +101,7 @@ export const ChocolateThai = () => {
   const [seed, setSeed] = useState();
   const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const loadPriceData = async () => {
     
@@ -136,11 +136,11 @@ export const ChocolateThai = () => {
       const amount = acaPrices;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -261,7 +261,7 @@ export const ChocolateThai = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b>{acaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
