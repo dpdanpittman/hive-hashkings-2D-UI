@@ -55,7 +55,7 @@ export class HashkingsAPI {
   getSteemAPI(method, params) {
     return axios
       .post(
-        "https://api.openhive.network",
+        "https://hived.privex.io",
         JSON.stringify({
           id: 0,
           jsonrpc: "2.0",
