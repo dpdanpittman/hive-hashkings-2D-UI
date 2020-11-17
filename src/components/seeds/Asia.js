@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSHiveKeychain from "../../hooks/useHiveKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import SeedGifting from './SeedGifting';
