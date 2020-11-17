@@ -5,7 +5,7 @@ import { Redirect } from 'react-router';
 import SwipeableViews from 'react-swipeable-views';
 import {seedTypes} from '../service/HashkingsAPI';
 import {sign} from "hivesigner";
-import useSteemKeychain from "../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../hooks/useHiveKeychain"; 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -126,7 +126,7 @@ export default function TradingFloor() {
   const [tool, setTool] = useState();
   const [value, setValue] = React.useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
   const seedBackground = "https://allhdwallpapers.com/wp-content/uploads/2018/12/beautiful-weed-plants.jpeg";
 
   const handleChange = (event, newValue) => {
@@ -144,14 +144,14 @@ export default function TradingFloor() {
 
       const memo = `papers`;
       const to = "hashkings";
-      const amount = seedTypes["t"].str;
+      const amount = "5";
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const Hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -199,11 +199,11 @@ export default function TradingFloor() {
       const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -251,11 +251,11 @@ export default function TradingFloor() {
       const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -303,11 +303,11 @@ export default function TradingFloor() {
       const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -355,11 +355,11 @@ export default function TradingFloor() {
       const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -407,11 +407,11 @@ export default function TradingFloor() {
       const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -1180,7 +1180,7 @@ export default function TradingFloor() {
           the automatic watering system developed by Automagical Services.
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
-          For more information please visit their latest blog post at <b><a href="https://steempeak.com/hashkings/@ecoinstant/automated-operation-episode-2-watering-your-hashkings-plots">Steampeak.com 
+          For more information please visit their latest blog post at <b><a href="https://peakd.com/hashkings/@ecoinstant/automated-operation-episode-2-watering-your-hashkings-plots">Steampeak.com 
             </a></b>
           </Typography>
         </CardContent>
@@ -1192,7 +1192,7 @@ export default function TradingFloor() {
         </a>
         </Button>
         <Button size="large" color="error">
-      <a href="https://steempeak.com/hashkings/@ecoinstant/automated-operation-episode-2-watering-your-hashkings-plots" target="_blank" rel="noreferrer">
+      <a href="https://peakd.com/hashkings/@ecoinstant/automated-operation-episode-2-watering-your-hashkings-plots" target="_blank" rel="noreferrer">
           Learn More
         </a>
         </Button>
