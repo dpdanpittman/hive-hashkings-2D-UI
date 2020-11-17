@@ -54,6 +54,22 @@ const useStyles = makeStyles(theme => ({
 export const MarketSeeds = () => {
   const {username} = useContext(StateContext);
   const seedBackground = "https://i.imgur.com/Kio2LW4.jpg";
+  const [acaPrices, setAcaPrices] = useState([0]);
+
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
 
   const theme = createMuiTheme({
     palette: {
@@ -95,10 +111,10 @@ export const MarketSeeds = () => {
           </Typography>
           <br/>
           <Typography variant="body2" color="textSecondary" component="p">
-          <font color="DFB17B" className={classes.font}><b>Price: 5 Hive</b></font>
+          <font color="DFB17B" className={classes.font}><b>Price: </b>{acaPrices} HIVE</font>
           </Typography>
               <label htmlFor="multiselect" />
-            <BuySeed type="t" />
+            <BuySeed type="r" />
         </CardContent>
       </Card>
       </Box> 

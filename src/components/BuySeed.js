@@ -9,8 +9,24 @@ import useSteemKeychain from "../hooks/useSteemKeychain";
 export default function BuySeed({type}) {
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
+  const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasSteemKeychain = useSteemKeychain();
+
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -19,7 +35,7 @@ export default function BuySeed({type}) {
 
       const memo = `${type}seed ${seed.id}`;
       const to = "hashkings";
-      const amount = seedTypes[type].str;
+      const amount = acaPrices;
       const currency = "HIVE";
 
       if (hasSteemKeychain()) {
