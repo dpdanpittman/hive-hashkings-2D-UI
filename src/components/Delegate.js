@@ -3,7 +3,7 @@ import {Button} from "primereact/button";
 import {Spinner} from "primereact/spinner";
 import {sign} from "hivesigner";
 import { makeStyles } from '@material-ui/core/styles';
-import useSteemKeychain from "../hooks/useSteemKeychain";
+import useHiveKeychain from "../hooks/useHiveKeychain";
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
@@ -47,7 +47,7 @@ function createData(item, value) {
 export default function Delegate({username, delegation, updateDelegation}) {
   const [amount, setAmount] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
   
   const classes = useStyles();
 
@@ -60,11 +60,11 @@ export default function Delegate({username, delegation, updateDelegation}) {
     const amountStr = (20 * newAmount).toString() + ".000";
     const unit = "HP";
 
-    if (hasSteemKeychain()) {
-      const steem_keychain = window.steem_keychain;
+    if (hasHiveKeychain()) {
+      const hive_keychain = window.hive_keychain;
       try {
         await new Promise((resolve, reject) => {
-          return steem_keychain.requestDelegation(
+          return hive_keychain.requestDelegation(
             username,
             delegatee,
             amountStr,
