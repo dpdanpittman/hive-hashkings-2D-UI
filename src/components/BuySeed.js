@@ -4,14 +4,14 @@ import {Dropdown} from "primereact/dropdown";
 import {seedNames, seedTypes} from "../service/HashkingsAPI";
 import {StateContext} from "../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../hooks/useSteemKeychain";
+import useHiveKeychain from "../hooks/useHiveKeychain";
 
 export default function BuySeed({type}) {
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
   const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const loadPriceData = async () => {
     
@@ -38,7 +38,7 @@ export default function BuySeed({type}) {
       const amount = acaPrices;
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
+      if (hasHiveKeychain()) {
         const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
