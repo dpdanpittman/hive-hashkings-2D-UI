@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import SeedGifting from './SeedGifting';
@@ -100,7 +100,7 @@ export const KingsBread = () => {
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
   const [acaPrices, setAcaPrices] = useState([0]);
 
   const loadPriceData = async () => {
@@ -133,14 +133,14 @@ export const KingsBread = () => {
 
       const memo = `rseed kbr`;
       const to = "hashkings";
-      const amount = acaPrices;
+      const amount = acaPrices.toFixed(3).toString();
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,

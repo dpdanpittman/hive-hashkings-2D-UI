@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import SeedGifting from './SeedGifting';
@@ -106,7 +106,7 @@ export default function Mexico({
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -121,14 +121,14 @@ export default function Mexico({
       setIsSubmitting(true);
       const memo = `f manage`;
       const amount = "0.500";
-      const currency = "STEEM";
+      const currency = "HIVE";
       const to = "hashkings";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -218,7 +218,7 @@ export default function Mexico({
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 0.5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: 0.5 HIVE</b></font>
               </Typography>
               <br/>
               <Button

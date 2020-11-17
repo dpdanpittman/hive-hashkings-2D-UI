@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import SeedGifting from './SeedGifting';
@@ -113,7 +113,7 @@ function createData(name, calories) {
 }
 
 const rows = [
-  createData('Family Tree', 'Steem Original'),
+  createData('Family Tree', 'Hive Original'),
   createData('Max Yield', '2 seeds/pollen'),
   createData('Sex', 'Random'),
 ];
@@ -137,7 +137,7 @@ export const SteemOG = () => {
   const [seed, setSeed] = useState();
   const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const loadPriceData = async () => {
     
@@ -169,14 +169,14 @@ export const SteemOG = () => {
 
       const memo = `spseed sog`;
       const to = "hashkings";
-      const amount = acaPrices;
+      const amount = acaPrices.toFixed(3).toString();
       const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -230,7 +230,7 @@ export const SteemOG = () => {
             <Grid container spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="Steem OG" src="https://i.imgur.com/ymrzJc9.png" />
+                  <img className={classes.img} alt="Hive OG" src="https://i.imgur.com/ymrzJc9.png" />
                 </ButtonBase>
               </Grid>
               <Grid item xs={12} sm container>
@@ -238,7 +238,7 @@ export const SteemOG = () => {
                   <Grid item xs>
                   <Typography gutterBottom variant="h4" component="h2" className={classes.font}>
                       <font color="#8C3820"><b>
-                      Steem OG (Brought to you by @canna-curate)</b>
+                      Hive OG (Brought to you by @canna-curate)</b>
                       </font>
                     </Typography>
                     <Typography variant="body2" gutterBottom className={classes.font}>
@@ -324,7 +324,7 @@ export const SteemOG = () => {
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
                 This seed is part of the first round of seeds and extremely rare. 
-                It can be used to make beta seeds of Steem OG and can be combined with other strains.
+                It can be used to make beta seeds of Hive OG and can be combined with other strains.
               </font>
               </Typography>
               <br/>

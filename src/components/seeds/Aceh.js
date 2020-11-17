@@ -133,7 +133,7 @@ export const Aceh = () => {
 
       const memo = `rseed ach`;
       const to = "hashkings";
-      const amount = acaPrices;
+      const amount = acaPrices.toFixed(3).toString();
       const currency = "HIVE";
 
       if (hasHiveKeychain()) {
