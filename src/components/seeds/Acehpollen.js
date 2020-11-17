@@ -18,7 +18,7 @@ import AcapulcoAvail from '../AcapulcoAvail';
 import {Button} from "primereact/button";
 import {StateContext} from "../../App";
 import {sign} from "hivesigner";
-import useSteemKeychain from "../../hooks/useSteemKeychain"; 
+import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import {seedTypes} from '../../service/HashkingsAPI';
@@ -93,7 +93,7 @@ export const Acehpollen = () => {
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -111,13 +111,13 @@ export const Acehpollen = () => {
       const memo = `tseed aca`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
@@ -238,7 +238,7 @@ export const Acehpollen = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: 5 HIVE</b></font>
               </Typography>
               <br/>
               <Button
