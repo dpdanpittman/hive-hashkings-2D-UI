@@ -148,7 +148,7 @@ export default function TradingFloor() {
       const currency = "HIVE";
 
       if (hasHiveKeychain()) {
-        const Hive_keychain = window.hive_keychain;
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
             return hive_keychain.requestTransfer(
