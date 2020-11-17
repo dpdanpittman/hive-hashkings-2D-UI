@@ -188,7 +188,7 @@ export const MarketPlots = () => {
       <Paper className={classes.paper}>
       <Typography paragraph className={classes.font}>
         <font color="DFB17B">Here is where you get yourself some land to grow on.  Each time you
-        would like to get a plot you will need to delegate 20 Hive Power.  Learn more about delegation <a href="https://steempeak.com/steemit/@katerinaramm/what-is-Hive-power-delegation">here</a>
+        would like to get a plot you will need to delegate 20 Hive Power.  Learn more about delegation <a href="https://hive.blog/passive-investment/@shortsegments/delegation-explained#:~:text=Delegation%20is%20a%20passive%20investment,content%20on%20the%20Hive%20blockchain.&text=The%20people%20or%20businesses%20you,they%20then%20share%20with%20you.">here</a>
         </font>
       </Typography>
       <Typography paragraph className={classes.font}>
