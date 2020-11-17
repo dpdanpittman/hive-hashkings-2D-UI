@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Button} from "primereact/button";
 import {Dropdown} from "primereact/dropdown";
 import {gardenNames} from "../service/HashkingsAPI";
-import useSteemKeychain from "../hooks/useSteemKeychain";
+import useHiveKeychain from "../hooks/useHiveKeychain";
 import {sign} from "hivesigner";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -33,7 +33,7 @@ export default function BuyGarden({
 }) {
   const [garden, setGarden] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const hasSteemKeychain = useSteemKeychain();
+  const hasHiveKeychain = useHiveKeychain();
 
   const classes = useStyles();
   
@@ -46,11 +46,11 @@ export default function BuyGarden({
       const currency = "HIVE";
       const to = "hashkings";
 
-      if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+      if (hasHiveKeychain()) {
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
