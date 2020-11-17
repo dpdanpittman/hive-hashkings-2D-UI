@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import BuySeed from "./BuySeed";
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -51,6 +51,22 @@ const useStyles = makeStyles(theme => ({
 
 export const MarketSeeds = () => {  
   const classes = useStyles();
+  const [acaPrices, setAcaPrices] = useState([0]);
+
+    const loadPriceData = async () => {
+      
+      const urlAPI = 'https://hashkings-api.herokuapp.com/';
+      
+      const response = await fetch(urlAPI);
+      const pricedata = await response.json();
+  
+      var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+      setAcaPrices(acaPrice);
+    }
+  
+    useEffect(() => {
+      loadPriceData();
+    }, []);
 
   return(
     <Paper className={classes.paperBlacky}>
