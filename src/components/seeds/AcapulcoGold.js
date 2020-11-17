@@ -170,7 +170,7 @@ export const AcapulcoGold = () => {
       const memo = `rseed aca`;
       const to = "hashkings";
       const amount = acaPrices;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;

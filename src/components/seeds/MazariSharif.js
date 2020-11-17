@@ -103,8 +103,24 @@ export const MazariSharif = () => {
   const [value, setValue] = React.useState(0);
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
+  const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasSteemKeychain = useSteemKeychain();
+
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -119,10 +135,10 @@ export const MazariSharif = () => {
     if (username) {
       setIsSubmitting(true);
 
-      const memo = `tseed mis`;
+      const memo = `rseed mis`;
       const to = "hashkings";
-      const amount = seedTypes["t"].str;
-      const currency = "STEEM";
+      const amount = acaPrices;
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
@@ -249,7 +265,7 @@ export const MazariSharif = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b>{acaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button

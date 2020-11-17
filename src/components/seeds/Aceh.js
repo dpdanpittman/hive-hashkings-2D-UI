@@ -99,6 +99,7 @@ export const Aceh = () => {
   const [value, setValue] = React.useState(0);
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
+  const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasSteemKeychain = useSteemKeychain();
 
@@ -110,14 +111,29 @@ export const Aceh = () => {
     setValue(index);
   };
 
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
+
   const handleSubmit = async e => {
     e.preventDefault();
     if (username) {
       setIsSubmitting(true);
 
-      const memo = `tseed ach`;
+      const memo = `rseed ach`;
       const to = "hashkings";
-      const amount = seedTypes["t"].str;
+      const amount = acaPrices;
       const currency = "STEEM";
 
       if (hasSteemKeychain()) {
@@ -245,7 +261,7 @@ export const Aceh = () => {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 STEEM</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b>{acaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
