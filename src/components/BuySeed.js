@@ -39,10 +39,10 @@ export default function BuySeed({type}) {
       const currency = "HIVE";
 
       if (hasSteemKeychain()) {
-        const steem_keychain = window.steem_keychain;
+        const hive_keychain = window.hive_keychain;
         try {
           await new Promise((resolve, reject) => {
-            return steem_keychain.requestTransfer(
+            return hive_keychain.requestTransfer(
               username,
               to,
               amount,
