@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {withRouter} from "react-router-dom";
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
@@ -134,7 +134,7 @@ export const Aceh = () => {
       const memo = `rseed ach`;
       const to = "hashkings";
       const amount = acaPrices;
-      const currency = "STEEM";
+      const currency = "HIVE";
 
       if (hasSteemKeychain()) {
         const steem_keychain = window.steem_keychain;
