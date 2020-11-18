@@ -9,13 +9,13 @@ export class HashkingsAPI {
   }
 
   getTrending() {
-    return this.getSteemAPI("get_discussions_by_trending", [
+    return this.getHiveAPI("get_discussions_by_trending", [
       { tag: "cannabis", limit: 20 }
     ]);
   }
 
   getTrendingHome() {
-    return this.getSteemAPI("get_discussions_by_trending", [
+    return this.getHiveAPI("get_discussions_by_trending", [
       { tag: "cannabis", limit: 1 }
     ]);
   }
@@ -52,7 +52,7 @@ export class HashkingsAPI {
     return this.get("");
   }
 
-  getSteemAPI(method, params) {
+  getHiveAPI(method, params) {
     return axios
       .post(
         "https://hived.privex.io",
@@ -67,12 +67,12 @@ export class HashkingsAPI {
   }
 
   getDGPO() {
-    return this.getSteemAPI("get_dynamic_global_properties", []);
+    return this.getHiveAPI("get_dynamic_global_properties", []);
   }
 
-  async getAccountHistory(steemPerVest, username, fetchAll, startId = -1) {
+  async getAccountHistory(hivePerVest, username, fetchAll, startId = -1) {
     try {
-      const history = await this.getSteemAPI("get_account_history", [
+      const history = await this.getHiveAPI("get_account_history", [
         username,
         startId,
         500
@@ -92,15 +92,15 @@ export class HashkingsAPI {
             {
               block,
               timestamp,
-              op: [, { permlink, sbd_payout, steem_payout, vesting_payout }]
+              op: [, { permlink, sbd_payout, hive_payout, vesting_payout }]
             }
           ] = payout;
 
           return {
             permlink,
             sbd_payout,
-            steem_payout,
-            sp_payout: `${(vesting_payout.split(" ")[0] * steemPerVest).toFixed(
+            hive_payout,
+            sp_payout: `${(vesting_payout.split(" ")[0] * hivePerVest).toFixed(
               3
             )} HP`,
             timestamp,
@@ -177,7 +177,7 @@ export class HashkingsAPI {
         oldestBlock >= 31804536
       ) {
         return this.getAccountHistory(
-          steemPerVest,
+          hivePerVest,
           username,
           fetchAll,
           oldestId
@@ -185,7 +185,7 @@ export class HashkingsAPI {
       } else {
         if (oldestBlock >= 31804536 && fetchAll) {
           const next = await this.getAccountHistory(
-            steemPerVest,
+            hivePerVest,
             username,
             fetchAll,
             oldestId
@@ -239,8 +239,8 @@ export class HashkingsAPI {
       .map(delegation => delegation.vests)
       .reduce((prev, current) => prev + current);
 
-    const delegationVestsToSteem = (
-      (parseFloat(dgpo.total_vesting_fund_steem.split(" ")[0]) *
+    const delegationVestsToHive = (
+      (parseFloat(dgpo.total_vesting_fund_hive.split(" ")[0]) *
         totalDelegation) /
       parseFloat(dgpo.total_vesting_shares.split(" ")[0]) /
       1000000 + 1217.81  
@@ -394,14 +394,14 @@ export class HashkingsAPI {
         availableGardens: availableGardens.length,
         activity,
         breederName: breederName,
-        delegation: delegationVestsToSteem,
+        delegation: delegationVestsToHive,
         leaderboard
       };
     } else {
       return {
         gardeners: stats.gardeners,
         gardens,
-        delegation: delegationVestsToSteem,
+        delegation: delegationVestsToHive,
         leaderboard
       };
     }
@@ -469,8 +469,8 @@ export class HashkingsAPI {
     return this.getAll().then(all => Object.keys(all.users).includes(username));
   }
 
-  steemUserExists(username) {
-    return this.getSteemAPI("get_accounts", [[username]]).then(
+  hiveUserExists(username) {
+    return this.getHiveAPI("get_accounts", [[username]]).then(
       user => user && user[0] && user[0].name
     );
   }
