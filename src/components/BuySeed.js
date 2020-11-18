@@ -33,7 +33,7 @@ export default function BuySeed({type}) {
     if (seed && username) {
       setIsSubmitting(true);
 
-      const memo = `${type}seed ${seed.id}`;
+      const memo = `rseed ${seed.id}`;
       const to = "hashkings";
       const amount = acaPrices.toFixed(3).toString();;
       const currency = "HIVE";

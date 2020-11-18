@@ -90,7 +90,7 @@ export const MarketSeeds = () => {
           <font color="DFB17B"><b>Price: </b>{acaPrices} HIVE</font>
           </Typography>
               <label htmlFor="multiselect" />
-            <BuySeed type="t" />
+            <BuySeed type="r" />
         </CardContent>
       </Card>
     </Grid>
