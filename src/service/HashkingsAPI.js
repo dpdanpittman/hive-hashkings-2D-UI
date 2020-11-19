@@ -240,7 +240,7 @@ export class HashkingsAPI {
       .reduce((prev, current) => prev + current);
 
     const delegationVestsToSteem = (
-      (parseFloat(dgpo.total_vesting_fund_steem.split(" ")[0]) *
+      (parseFloat(dgpo.total_vesting_fund_hive.split(" ")[0]) *
         totalDelegation) /
       parseFloat(dgpo.total_vesting_shares.split(" ")[0]) /
       1000000 + 1217.81  
