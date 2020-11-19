@@ -168,59 +168,12 @@ export default function() {
             <center><h1>
               <b><font color="DFB17B"><u>Payouts and Purchases</u></font></b>
             </h1>
-            <p><font color="DFB17B">Since {oldestDate}{" "}</font></p>
+            <p><font color="DFB17B">Current as of {oldestDate}{" "}</font></p>
             </center>
           </Paper>
           <br/>
             <div className={classes.heading}>
             <Paper className={classes.paper}>
-              <ExpansionPanel className={classes.extension}>
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                >
-                  <Typography className={classes.heading}><font color="DFB17B">Payouts</font></Typography>
-                  </ExpansionPanelSummary>
-                  <Button
-                  className="export-stats"
-                  disabled={loading}
-                  label="Export as CSV"
-                  onClick={() => payoutsTable.current.exportCSV()}
-                />
-                  <ExpansionPanelDetails>
-              <DataTable
-                value={recentPayouts}
-                loading={loading}
-                responsive={true}
-                emptyMessage="No payouts found"
-                ref={payoutsTable}
-              >
-                <Column field="timestamp" header="Date" sortable={true} />
-                <Column
-                  field="sp_payout"
-                  header="STEEM Power Payout"
-                  sortable={true}
-                />
-                <Column
-                  field="sbd_payout"
-                  header="SBD Payout"
-                  sortable={true}
-                />
-                <Column
-                  field="steem_payout"
-                  header="STEEM Payout"
-                  sortable={true}
-                />
-                <Column
-                  field="block"
-                  header="Block"
-                  sortable={true}
-                  body={blockTemplate}
-                />
-              </DataTable>
-              </ExpansionPanelDetails>
-      </ExpansionPanel>
       </Paper>
               <br/>
               <Paper className={classes.paper}>

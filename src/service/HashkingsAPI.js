@@ -174,7 +174,7 @@ export class HashkingsAPI {
         payouts.length === 0 &&
         landPurchases.length === 0 &&
         seedPurchases.length === 0 &&
-        oldestBlock >= 31804536
+        oldestBlock >= 27100000
       ) {
         return this.getAccountHistory(
           steemPerVest,
@@ -183,7 +183,7 @@ export class HashkingsAPI {
           oldestId
         );
       } else {
-        if (oldestBlock >= 31804536 && fetchAll) {
+        if (oldestBlock >= 27100000 && fetchAll) {
           const next = await this.getAccountHistory(
             steemPerVest,
             username,
@@ -200,7 +200,7 @@ export class HashkingsAPI {
           return {
             payouts,
             oldestId,
-            stop: oldestBlock < 48007159, // block of first action,
+            stop: oldestBlock < 27100000, // block of first action,
             date: new Date(lastTx[1].timestamp).toDateString(),
             landPurchases,
             seedPurchases
@@ -243,7 +243,7 @@ export class HashkingsAPI {
       (parseFloat(dgpo.total_vesting_fund_hive.split(" ")[0]) *
         totalDelegation) /
       parseFloat(dgpo.total_vesting_shares.split(" ")[0]) /
-      1000000 + 1217.81  
+      1000000 
     ).toFixed(3);
 
     const leaderboard = Object.keys(all.users)
