@@ -200,7 +200,7 @@ export class HashkingsAPI {
           return {
             payouts,
             oldestId,
-            stop: oldestBlock < 31804536, // block of first action,
+            stop: oldestBlock < 48007159, // block of first action,
             date: new Date(lastTx[1].timestamp).toDateString(),
             landPurchases,
             seedPurchases
