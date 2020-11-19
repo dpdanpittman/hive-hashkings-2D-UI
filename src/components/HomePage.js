@@ -76,7 +76,6 @@ const image1 = "https://i.imgur.com/j2CGYh2.jpg";
 if (!isDesktop) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
-      <DialogPage />
     <div className={classes.root}>
     
       <Container fixed>
