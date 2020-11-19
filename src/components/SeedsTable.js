@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext, StateContext, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -14,18 +14,46 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, total) {
-  return { name, total};
-}
 
-const rows = [
-  createData('Seeds', 4),
-  createData('Pollen', 6),
-  createData('Buds', 10),
-];
 
 export default function SeedsTable() {
   const classes = useStyles();
+  const {username} = useState();
+
+  const [experience, setExperience] = useState([0]);
+  const [breederName, setBreederName] = useState("");
+
+  const loadData = async (ourUsername) => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ ourUsername;
+    
+    const response = await fetch(urlAPI);
+    const data = await response.json();
+    console.log(data)
+    if(data) {
+    var xpsValue = data.xps;
+    var alliance = data.alliance;
+    var breederName = data.breeder;
+
+    setExperience(xpsValue);
+    setGuild(alliance);
+    setBreederName(breederName);
+  }
+}
+
+  useEffect(() => {
+    loadData(username);
+  }, [username]);
+
+  function createData(name, total) {
+    return { name, total};
+  }
+  
+  const rows = [
+    createData('Seeds', 4),
+    createData('Pollen', 6),
+    createData('Buds', 10),
+  ];
 
   return (
     <TableContainer component={Paper}>
