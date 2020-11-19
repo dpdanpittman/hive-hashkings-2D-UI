@@ -53,23 +53,25 @@ export default function Profile() {
     const response = await fetch(urlAPI);
     const data = await response.json();
     
-    var xpsValue = data.xps
+    if(data.xps) {
+    var xpsValue = data.xps;
     var alliance = data.alliance;
-    var breederName = data.breeder
+    var breederName = data.breeder;
 
     setExperience(xpsValue);
     setGuild(alliance);
     setBreederName(breederName);
   }
+}
 
   useEffect(() => {
     loadData(username);
   }, [username]);
 
   return (
+    <Grid container spacing={1}>
     <Card className={classes.root}>
-      <div className={classes.details}>
-        <Grid xs={6}>
+    <Grid xs={4}>
           <center>
       <CardMedia
             className={classes.cover}
@@ -90,13 +92,15 @@ export default function Profile() {
             XP: {experience}
           </Typography>
         </CardContent>
+        
+     
         </Grid>
-        </div>
-        <hr/>
-        <div className={classes.details}>
         <br/>
+        <Grid xs={8}>
         <ProfileDetails />  
-        </div>
+        </Grid>
     </Card>
+    </Grid>
+    
   );
 }
