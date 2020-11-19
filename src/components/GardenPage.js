@@ -34,6 +34,7 @@ export const GardenPage = (user) => {
           <br/>
           <Container>
           <GardenActions />
+          <GrowJournal />
           </Container>
           <br/>
         </Parallax>
@@ -44,6 +45,7 @@ export const GardenPage = (user) => {
       <div className="card-blank-green-1">
         <Parallax blur={1} bgImage={farmBackground} strength={500}>
         <GardenActions />
+        <GrowJournal />
         <br/>
         </Parallax>
     </div>
