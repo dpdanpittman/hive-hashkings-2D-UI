@@ -48,7 +48,7 @@ export default function Profile() {
 
   const loadData = async (ourUsername) => {
     
-    const urlAPI = 'https://etherchest-backend.herokuapp.com/u/'+ourUsername;
+    const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ourUsername;
     
     const response = await fetch(urlAPI);
     const data = await response.json();
