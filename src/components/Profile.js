@@ -42,9 +42,9 @@ export default function Profile() {
   const classes = useStyles();
   const {username} = useState();
 
-  const [guild, setGuild] = useState();
-  const [experience, setExperience] = useState();
-  const [breederName, setBreederName] = useState();
+  const [guild, setGuild] = useState("");
+  const [experience, setExperience] = useState([0]);
+  const [breederName, setBreederName] = useState("");
 
   const loadData = async (ourUsername) => {
     
