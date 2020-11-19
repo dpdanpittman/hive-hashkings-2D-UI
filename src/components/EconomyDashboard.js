@@ -136,7 +136,7 @@ export const EconomyDashboard = () => {
         setLoading(true);
         hashkingsApi.getDGPO().then(dgpo => {
           const spv =
-            parseFloat(dgpo.total_vesting_fund_steem.split(" ")[0]) /
+            parseFloat(dgpo.total_vesting_fund_hive.split(" ")[0]) /
             parseFloat(dgpo.total_vesting_shares.split(" ")[0]);
           Promise.all([
             hashkingsApi
