@@ -70,11 +70,13 @@ export default function Profile() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <Grid xs={6}>
+          <center>
       <CardMedia
             className={classes.cover}
             image="https://i.imgur.com/ymrzJc9.png"
             title="Canna Curate"
           />
+          </center>
         <CardContent className={classes.content}>
           <Typography component="h4" variant="h4">
             {breederName}
