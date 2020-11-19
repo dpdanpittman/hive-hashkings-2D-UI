@@ -305,7 +305,7 @@ export class HashkingsAPI {
                 when: formatTimeAgo(date),
                 id: garden.id,
                 block: watered[0],
-                strain: garden.seed.strain,
+                strain: garden.strain,
                 type: "watered"
               };
             })
