@@ -18,32 +18,6 @@ const useStyles = makeStyles({
 
 export default function SeedsTable() {
   const classes = useStyles();
-  const {username} = useState();
-
-  const [experience, setExperience] = useState([0]);
-  const [breederName, setBreederName] = useState("");
-
-  const loadData = async (ourUsername) => {
-    
-    const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ ourUsername;
-    
-    const response = await fetch(urlAPI);
-    const data = await response.json();
-    console.log(data)
-    if(data) {
-    var xpsValue = data.xps;
-    var alliance = data.alliance;
-    var breederName = data.breeder;
-
-    setExperience(xpsValue);
-    setGuild(alliance);
-    setBreederName(breederName);
-  }
-}
-
-  useEffect(() => {
-    loadData(username);
-  }, [username]);
 
   function createData(name, total) {
     return { name, total};
