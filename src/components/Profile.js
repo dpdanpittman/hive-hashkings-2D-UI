@@ -52,8 +52,9 @@ export default function Profile() {
     
     const response = await fetch(urlAPI);
     const data = await response.text();
+    const fetchData = JSON.parse(data);
     
-    if(data) {
+    if(fetchData) {
     var xpsValue = data.xps;
     var alliance = data.alliance;
     var breederName = data.breeder;
