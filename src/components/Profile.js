@@ -40,12 +40,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Profile() {
   const classes = useStyles();
-  const theme = useTheme();
   const {username} = useState();
-  const [headBlockNum, setHeadBlockNum] = useState(0);
 
   const [guild, setGuild] = useState();
   const [experience, setExperience] = useState();
+  const [breederName, setBreederName] = useState();
 
   const loadData = async (ourUsername) => {
     
@@ -54,13 +53,13 @@ export default function Profile() {
     const response = await fetch(urlAPI);
     const data = await response.json();
     
-    if (data.xps) {
     var xpsValue = data.xps
     var alliance = data.alliance;
+    var breederName = data.breeder
 
     setExperience(xpsValue);
     setGuild(alliance);
-    } 
+    setBreederName(breederName);
   }
 
   useEffect(() => {
@@ -78,7 +77,7 @@ export default function Profile() {
           />
         <CardContent className={classes.content}>
           <Typography component="h4" variant="h4">
-            {user.breederName}
+            {breederName}
           </Typography>
           <br/>
           <Typography variant="subtitle1">
