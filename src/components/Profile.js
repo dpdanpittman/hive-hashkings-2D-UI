@@ -44,44 +44,8 @@ export default function Profile() {
   const {username} = useState();
   const [headBlockNum, setHeadBlockNum] = useState(0);
 
-  const [guild, setGuild] = useState([0]);
-  const [experience, setExperience] = useState([0]);
-
-  const hashkingsApi = new HashkingsAPI();
-
-  const [user, setUser] = useState({
-    availableSeeds: [],
-    activeGardens: [],
-    availablePollen: [],
-    availableBuds: [],
-    availableKief: [],
-    availableOil: [],
-    totalxps: [],
-    availableDippedJoints: [],
-    availableBlunts: [],
-    availableEdibles: [],
-    availableJoints: [],
-    availableCannagars: [],
-    availableBrownieMix: [],
-    availablePapers: [],
-    availableHempwraps: [],
-    availableBluntwraps: [],
-    availableVacovens: [],
-    availableKiefbox: [],
-    availableGardens: [],
-    breederName: [],
-    headBlockNum: undefined
-  });
-
-  useEffect(() => {
-    if (username) {
-      hashkingsApi.getUserGarden(username).then(garden => {
-        const {headBlockNum, ...user} = garden;
-        setUser(user);
-        setHeadBlockNum(headBlockNum);
-      });
-    }
-  }, [username]);
+  const [guild, setGuild] = useState();
+  const [experience, setExperience] = useState();
 
   const loadData = async (ourUsername) => {
     
