@@ -183,7 +183,7 @@ const logOut = () => {
         label= {username}
         color="primary"
         //onDelete={logOut}
-        onClick={handleOpen}
+        //onClick={handleOpen}
         className={classes.font}
       />
         </Tooltip> 
