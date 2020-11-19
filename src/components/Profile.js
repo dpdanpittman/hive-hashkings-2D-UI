@@ -43,6 +43,10 @@ export default function Profile() {
   const theme = useTheme();
   const {username} = useState();
   const [headBlockNum, setHeadBlockNum] = useState(0);
+
+  const [guild, setGuild] = useState([0]);
+  const [experience, setExperience] = useState([0]);
+
   const hashkingsApi = new HashkingsAPI();
 
   const [user, setUser] = useState({
@@ -79,6 +83,25 @@ export default function Profile() {
     }
   }, [username]);
 
+  const loadData = async (ourUsername) => {
+    
+    const urlAPI = 'https://etherchest-backend.herokuapp.com/u/'+ourUsername;
+    
+    const response = await fetch(urlAPI);
+    const data = await response.json();
+    
+    if (data.xps) {
+    var xpsValue = data.xps
+    var alliance = data.alliance;
+
+    setExperience(xpsValue);
+    setGuild(alliance);
+    } 
+  }
+
+  useEffect(() => {
+    loadData(username);
+  }, [username]);
 
   return (
     <Card className={classes.root}>
@@ -95,14 +118,11 @@ export default function Profile() {
           </Typography>
           <br/>
           <Typography variant="subtitle1">
-            Northwest Cannabis Association
+            {guild}
           </Typography>
           <hr/>
-          <Typography variant="subtitle1" color="textSecondary">
-          Level: {user.totalxps}
-          </Typography>   
-          <Typography variant="subtitle1" color="textSecondary">
-            XP: {user.availableBuds.length}
+          <Typography variant="subtitle1" color="textSecondary" align="center">
+            XP: {experience}
           </Typography>
         </CardContent>
         </Grid>
