@@ -51,8 +51,8 @@ export default function Profile() {
     const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ ourUsername;
     
     const response = await fetch(urlAPI);
-    const data = await response.json();
-    console.log(data)
+    const data = await response.text();
+    
     if(data) {
     var xpsValue = data.xps;
     var alliance = data.alliance;
