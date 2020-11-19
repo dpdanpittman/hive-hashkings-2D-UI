@@ -48,7 +48,7 @@ export default function Profile() {
 
   const loadData = async (ourUsername) => {
     
-    const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ourUsername;
+    const urlAPI = 'https://hashkings-api.herokuapp.com/u/'+ ourUsername;
     
     const response = await fetch(urlAPI);
     const data = await response.json();
@@ -71,14 +71,12 @@ export default function Profile() {
   return (
     <Grid container spacing={1}>
     <Card className={classes.root}>
-    <Grid xs={4}>
-          <center>
+    <Grid xs={3}>
       <CardMedia
             className={classes.cover}
             image="https://i.imgur.com/ymrzJc9.png"
             title="Canna Curate"
           />
-          </center>
         <CardContent className={classes.content}>
           <Typography component="h4" variant="h4">
             {breederName}
@@ -96,7 +94,7 @@ export default function Profile() {
      
         </Grid>
         <br/>
-        <Grid xs={8}>
+        <Grid xs={9}>
         <ProfileDetails />  
         </Grid>
     </Card>
