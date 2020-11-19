@@ -120,7 +120,7 @@ export default function DesktopTopbar(){
               placement="top"
               TransitionComponent={Zoom}
               >
-            <IconButton className="layout-menu-button" component={Link1} to="/market/seedbank">
+            <IconButton className="layout-menu-button" component={Link1} to="/accounting">
             <FarmTopbarIcon />
             </IconButton>
             </HtmlTooltip>
