@@ -166,9 +166,9 @@ export default function() {
           <Paper className={classes.paper}>
             <br />
             <center><h1>
-              <b><font color="DFB17B"><u>Payouts and Purchases</u></font></b>
+              <b><font color="DFB17B"><u>Purchases and Leases</u></font></b>
             </h1>
-            <p><font color="DFB17B">Current as of {oldestDate}{" "}</font></p>
+            <p><font color="DFB17B">Since {oldestDate}{" "}</font></p>
             </center>
           </Paper>
           <br/>
