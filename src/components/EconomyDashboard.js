@@ -168,7 +168,7 @@ if (username) {
         <div className="card-blank-green-1">        
           <div className={classes.flex}>
             <Grid container spacing={3}>
-              <Grid item xs>
+              <Grid item xs={4}>
                   <StyleRoot>
                     <div style={styles.fadeInDown}>
                     <Card className={classes.card}>
@@ -201,7 +201,7 @@ if (username) {
                   </div>
                   </StyleRoot>
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={4}>
                 <StyleRoot>
                     <div style={styles.fadeInDown1}>
                     <Card className={classes.card}>
@@ -234,7 +234,7 @@ if (username) {
                 </div>
                 </StyleRoot>
             </Grid>
-          <Grid item xs>
+          <Grid item xs={4}>
           <StyleRoot>
             <div style={styles.fadeInDown2}>
                 <Card className={classes.card}>
