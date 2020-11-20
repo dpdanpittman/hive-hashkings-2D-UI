@@ -25,7 +25,7 @@ const SCCallback = ({history}) => {
           history.push("/login");
         });
     } else {
-      history.push("/login");
+      history.push("/");
     }
   }, []);
 
