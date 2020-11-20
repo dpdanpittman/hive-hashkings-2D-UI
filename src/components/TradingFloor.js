@@ -467,38 +467,12 @@ export default function TradingFloor() {
           <Tab className={classes.fontDark} label="Hybrid Strains" {...a11yProps(1)} disabled />
           <Tab className={classes.fontDark} label="Farm Plots" {...a11yProps(2)} />
           <Tab className={classes.fontDark} label="Services" {...a11yProps(3)} disabled/>
-          <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} />
+          <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} disabled/>
         </Tabs>
       </AppBar>
         <TabPanel value={value} index={0} dir={theme.direction}>
         <div className={classes.root}>
       <Grid container spacing={3}>
-      <Grid item xs={3}>
-        <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.mediaSteemOG}
-          image="https://i.imgur.com/ymrzJc9.png"
-          title="Lashkar Gah"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          HIVE OG
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
-          HIVE OG is a hybrid created by @jonyoudyer, founder of @canna-curate in Central California.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-      <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/HIVE-og" color="error">
-          Seeds
-        </Link>
-        </Button>
-      </CardActions>
-    </Card>
-        </Grid>
         <Grid item xs={3}>
         <Card className={classes.card}>
       <CardActionArea>
