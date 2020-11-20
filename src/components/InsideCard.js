@@ -10,14 +10,19 @@ const useStyles = makeStyles({
   media: {
     height: 360,
   },
+  paper: {
+    backgroundColor: "transparent",
+  },
 });
 
 export default function MediaCard() {
   const classes = useStyles();
 
   return (
-    <Paper>
+    <Paper className={classes.paper}>
+      <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ju9c5_wqUcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
     </Paper>
   );
 }
