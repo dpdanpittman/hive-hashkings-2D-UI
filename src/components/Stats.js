@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { Button } from "primereact/button";
+import Grid from '@material-ui/core/Grid';
 import { HashkingsAPI } from "../service/HashkingsAPI";
 import { StateContext } from "../App";
 import { DataTable } from "primereact/datatable";
@@ -161,20 +162,25 @@ export default function() {
     );
   } else {
     return (
-      <Paper className={classes.paperBlack}>
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
+        <Paper className={classes.paperBlack}>
         <EconomyDashboard />
+        </Paper>
+        </Grid>
+        <Grid item xs={12}>
+      <Paper className={classes.paperBlack}>
           <Paper className={classes.paper}>
             <br />
-            <center><h1>
+            <center>
+              <h1>
               <b><font color="DFB17B"><u>Purchases and Leases</u></font></b>
             </h1>
             <p><font color="DFB17B">Since {oldestDate}{" "}</font></p>
             </center>
           </Paper>
           <br/>
-            <div className={classes.heading}>
-            <Paper className={classes.paper}>
-      </Paper>
+          
               <br/>
               <Paper className={classes.paper}>
               <ExpansionPanel className={classes.extension}>
@@ -274,9 +280,9 @@ export default function() {
                 }
                 onClick={fetchMore}
               />
-            </div>
-         
       </Paper>
+      </Grid>
+      </Grid>
     );
   }
 }
