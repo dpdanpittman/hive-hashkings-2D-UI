@@ -38,7 +38,7 @@ export const FAQPage = () => {
 			to expand into a growing new platform.</b></h3></font>
       <font color="#DFB17B">
 			<h3><b>The development team consists of three core members: Daniel Pittman, Steven Ettinger and J. Rawsthorne. Their 
-			background experience includes Cannabis Cultivation, Ethereum Smart Contracts, Steemjs, Dlux VR, Node, Frontend and Backend api 
+			background experience includes Cannabis Cultivation, Ethereum Smart Contracts, Hivejs, Dlux VR, Node, Frontend and Backend api 
 			design.</b></h3></font>
       <font color="#DFB17B">
 			<h3><b>Designed to be a virtual Cannabis farming game that implements HIVE tokens on the blockchain, Hashkings intends to 
@@ -175,8 +175,8 @@ export const FAQPage = () => {
         <ExpansionPanelDetails className={classes.text}>
           <Typography>
             Please visit 
-          <a href="https://steempeak.com/hashkings/@hashkings/hashkings-seeds-small-overview">
-            Our Seeds overview</a> on steempeak to learn more.
+          <a href="https://peakd.com/hashkings/@hashkings/hashkings-seeds-small-overview">
+            Our Seeds overview</a> on peakd.com to learn more.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
