@@ -982,7 +982,7 @@ export default function TradingFloor() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          Lashkar Gah
+          Lashkar Gah Pollen
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
           Lashkar Gah is an indica landrace strain named after its geographic origin in south Afghanistan. 
@@ -1012,7 +1012,7 @@ export default function TradingFloor() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          Afghani
+          Afghani Pollen
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
           Afghani is a heavy indica strain named after its geographic origin, where the earliest 
@@ -1040,7 +1040,7 @@ export default function TradingFloor() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          Mazar i Sharif
+          Mazar i Sharif Pollen
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
           A legendary strain grown in the far north of Afghanistan.  In fertile and well-irrigated 
