@@ -39,7 +39,7 @@ import CentralAmerica from './components/seeds/CentralAmerica';
 import Asia from './components/seeds/Asia';
 import Mexico from './components/seeds/Mexico';
 
-import { MazariSharifpollen } from "./components/seeds/MazariSharifpollen";
+import { MazariSharifPollen } from "./components/seeds/MazariSharifpollen";
 import { PanamaRedpollen } from "./components/seeds/PanamaRedpollen";
 import { SwaziGoldpollen } from "./components/seeds/SwaziGoldpollen";
 import { ColombianGoldpollen } from "./components/seeds/ColombianGoldpollen";
@@ -48,12 +48,12 @@ import { Kilimanjaropollen } from "./components/seeds/Kilimanjaropollen";
 import { KingsBreadpollen } from "./components/seeds/KingsBreadpollen";
 import { AcapulcoGoldpollen } from "./components/seeds/AcapulcoGoldpollen";
 import { LambsBreadpollen } from "./components/seeds/LambsBreadpollen";
-import { HinduKushpollen } from "./components/seeds/HinduKushpollen";
+import { HinduKushPollen } from "./components/seeds/HinduKushpollen";
 import { DurbanPoisonpollen } from "./components/seeds/DurbanPoisonpollen";
 import { ChocolateThaipollen } from "./components/seeds/ChocolateThaipollen";
 import { Thaipollen } from "./components/seeds/Thaipollen";
-import { Afghanipollen } from "./components/seeds/Afghanipollen";
-import { LashkarGahpollen } from "./components/seeds/LashkarGahpollen";
+import { AfghaniPollen } from "./components/seeds/Afghanipollen";
+import { LashkarGahPollen } from "./components/seeds/LashkarGahpollen";
 import { Acehpollen } from "./components/seeds/Acehpollen";
 
 import GiftSeed from "./components/GiftSeed";
@@ -356,7 +356,7 @@ class App extends Component {
             <Route path="/seeds/aceh" component={Aceh} />
 
             <Route path="/pollen/colombian-gold" component={ColombianGoldpollen} />
-            <Route path="/pollen/lashkar-gah" component={LashkarGahpollen} />
+            <Route path="/pollen/lashkar-gah" component={LashkarGahPollen} />
             <Route path="/pollen/chocolate-thai" component={ChocolateThaipollen} />
             <Route path="/pollen/thai" component={Thaipollen} />
             <Route path="/pollen/swazi-gold" component={SwaziGoldpollen} />
@@ -366,11 +366,11 @@ class App extends Component {
             <Route path="/pollen/acapulco-gold" component={AcapulcoGoldpollen} />
             <Route path="/pollen/durban-poison" component={DurbanPoisonpollen} />
             <Route path="/pollen/lambs-bread" component={LambsBreadpollen} />
-            <Route path="/pollen/mazar-i-sharif" component={MazariSharifpollen} />
-            <Route path="/pollen/hindu-kush" component={HinduKushpollen} />
+            <Route path="/pollen/mazar-i-sharif" component={MazariSharifPollen} />
+            <Route path="/pollen/hindu-kush" component={HinduKushPollen} />
             <Route path="/pollen/panama-red" component={PanamaRedpollen} />
             <Route path="/pollen/aceh" component={Acehpollen} />
-            <Route path="/pollen/afghani" component={Afghanipollen} />
+            <Route path="/pollen/afghani" component={AfghaniPollen} />
 
             <Route path="/plots/Afghanistan" component={Afghanistan} />
             <Route path="/plots/Africa" component={Africa} />

@@ -464,7 +464,7 @@ export default function TradingFloor() {
           aria-label="full width tabs"
         >
           <Tab className={classes.fontDark} label="Hashkings Signature Strains" {...a11yProps(0)} />
-          <Tab className={classes.fontDark} label="Pollen" {...a11yProps(1)} disabled />
+          <Tab className={classes.fontDark} label="Pollen" {...a11yProps(1)} />
           <Tab className={classes.fontDark} label="Farm Plots" {...a11yProps(2)} />
           <Tab className={classes.fontDark} label="Services" {...a11yProps(3)} disabled/>
           <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} disabled/>

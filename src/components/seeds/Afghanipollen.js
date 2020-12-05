@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {withRouter} from "react-router-dom";
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
@@ -21,7 +21,9 @@ import {sign} from "hivesigner";
 import useHiveKeychain from "../../hooks/useHiveKeychain"; 
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
+import SeedGifting from './SeedGifting';
 import {seedTypes} from '../../service/HashkingsAPI';
+import { DealIcon, StoreIcon, GiftIcon } from "../Icons";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -63,6 +65,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 500,
     backgroundColor: "transparent",
     color: '#DFB17B',
+    fontFamily: '"Jua", sans-serif',
   },
   image: {
     width: 128,
@@ -75,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     maxHeight: '100%',
   },
   card: {
-    backgroundColor: "#154A4A",
+    backgroundColor: "#062B3D",
   },
   media: {
     height: 140,
@@ -83,17 +86,41 @@ const useStyles = makeStyles(theme => ({
   background: {
     backgroundColor: "#154A4A",
   },
+  font: {
+    fontFamily: '"Jua", sans-serif',
+    color: '#DFB17B',
+  },
+  fontDark: {
+    fontFamily: '"Jua", sans-serif',
+    color: '#040828',
+  },
 }));
 
-export const Afghanipollen = () => {
+export const AfghaniPollen = () => {
   const classes = useStyles();
   const image1 = "https://i.imgur.com/j2CGYh2.jpg";
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
+  const [acaPrices, setAcaPrices] = useState([0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const hasHiveKeychain = useHiveKeychain();
+
+  const loadPriceData = async () => {
+    
+    const urlAPI = 'https://hashkings-api.herokuapp.com/';
+    
+    const response = await fetch(urlAPI);
+    const pricedata = await response.json();
+
+    var acaPrice = pricedata.stats.prices.listed.seeds.reg;
+    setAcaPrices(acaPrice);
+  }
+
+  useEffect(() => {
+    loadPriceData();
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -108,9 +135,9 @@ export const Afghanipollen = () => {
     if (username) {
       setIsSubmitting(true);
 
-      const memo = `tseed aca`;
+      const memo = `pollen afg`;
       const to = "hashkings";
-      const amount = seedTypes["t"].str;
+      const amount = acaPrices.toFixed(3).toString();
       const currency = "HIVE";
 
       if (hasHiveKeychain()) {
@@ -149,7 +176,7 @@ export const Afghanipollen = () => {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/market/seedbank`
-            : "http://localhost:3000/market/seedbank"
+            : "https://localhost:3000/market/seedbank"
         );
       }
     }
@@ -164,28 +191,28 @@ export const Afghanipollen = () => {
       <Container fixed>
       <div className={classes.root}>
       <WelcomeCard />
-      <br/><br/>
+      <br/><hr/><br/>
       <Grid container spacing={3}>
         <Grid item xs>
           <Card className={classes.paper} raised={true}>
             <Grid container spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="Acapulco Gold" src="https://i.imgur.com/iAgZUb9.png" />
+                  <img className={classes.img} alt="Afghani" src="https://i.imgur.com/DemC3fz.png" />
                 </ButtonBase>
               </Grid>
               <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                  <Typography gutterBottom variant="h5" component="h2">
-                      <font color="#DFB17B"><b>
-                      Acapulco Gold</b>
+                  <Typography gutterBottom variant="h4" component="h2" className={classes.font}>
+                      <font color="#8C3820"><b>
+                      Afghani Pollen</b>
                       </font>
                     </Typography>
-                    <Typography variant="body2" gutterBottom>
+                    <Typography variant="body2" gutterBottom className={classes.font}>
                       Landrace Strain
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body2" className={classes.font}>
                       ID: 1030114
                     </Typography>
                   </Grid>
@@ -193,7 +220,7 @@ export const Afghanipollen = () => {
                   </Grid>
                 </Grid>
                 <Grid item>
-                  <Typography variant="subtitle1">Sativa</Typography>
+                  <Typography variant="h5" className={classes.fontDark}>Indica</Typography>
                 </Grid>
               </Grid>
             </Grid>
@@ -202,19 +229,19 @@ export const Afghanipollen = () => {
         <Grid item xs>
           <Paper className={classes.paper}>
           <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="dynamic" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
-          textColor="primary"
+          textColor="error"
           variant="fullWidth"
-          aria-label="full width tabs example"
+          aria-label="Market Tabs"
           className={classes.background}
         >
-          <Tab label="Official Seeds" {...a11yProps(0)} />
-          <Tab label="User Seeds" {...a11yProps(1)} />
-          <Tab label="Send Seeds" {...a11yProps(2)} />
+          <Tab icon={<StoreIcon />} {...a11yProps(0)} className={classes.font} />
+          <Tab icon={<DealIcon />} {...a11yProps(1)} className={classes.font} disabled={true} />
+          <Tab icon={<GiftIcon />} {...a11yProps(2)} className={classes.font} disabled={true} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -231,14 +258,14 @@ export const Afghanipollen = () => {
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
-                This seed is part of the first round of seeds and extremely rare. 
-                It can be used to make beta seeds.
+                This pollen is part of the first round of pollen and extremely rare. 
+                It can be used to make beta pollen.
               </font>
               </Typography>
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: 5 HIVE</b></font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b>{acaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
@@ -254,6 +281,7 @@ export const Afghanipollen = () => {
         <AcapulcoAvail />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
+          <SeedGifting />
         </TabPanel>
       </SwipeableViews>
     </div>
@@ -266,4 +294,4 @@ export const Afghanipollen = () => {
     );
 };
 
-export default withRouter(Afghanipollen);
+export default withRouter(AfghaniPollen);
