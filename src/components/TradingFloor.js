@@ -339,7 +339,7 @@ export default function TradingFloor() {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
+            : "https://localhost:3000/markets"
         );
       }
     }
@@ -391,7 +391,7 @@ export default function TradingFloor() {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
+            : "https://localhost:3000/markets"
         );
       }
     }
@@ -464,7 +464,7 @@ export default function TradingFloor() {
           aria-label="full width tabs"
         >
           <Tab className={classes.fontDark} label="Hashkings Signature Strains" {...a11yProps(0)} />
-          <Tab className={classes.fontDark} label="Hybrid Strains" {...a11yProps(1)} disabled />
+          <Tab className={classes.fontDark} label="Pollen" {...a11yProps(1)} disabled />
           <Tab className={classes.fontDark} label="Farm Plots" {...a11yProps(2)} />
           <Tab className={classes.fontDark} label="Services" {...a11yProps(3)} disabled/>
           <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} disabled/>
@@ -931,6 +931,129 @@ export default function TradingFloor() {
       <Button size="large" color="error">
       <Link component={Link1} to="/seeds/thai" color="error">
         Seeds
+        </Link>
+        </Button>
+      </CardActions>
+    </Card>
+        </Grid>
+        </Grid>
+    </div>
+        </TabPanel>
+
+        <TabPanel value={value} index={1} dir={theme.direction}>
+        <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={3}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://i.imgur.com/vj68ESn.png"
+          title="Hindu Kush"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+          Hindu Kush
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
+          Hindu Kush is a pure indica strain named after the mountain range stretching 500 miles 
+          between Pakistan and Afghanistan where it originated. The harsh climate of its homeland has 
+          conditioned this strain to express a thick, protective coat of crystal trichomes 
+          cherished by hash makers worldwide. 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Button size="large" color="error">
+      <Link component={Link1} to="/seeds/hindu-kush" color="error">
+          Pollen
+        </Link>
+        </Button>
+      </CardActions>
+    </Card>
+        </Grid>
+        <Grid item xs={3}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://i.imgur.com/AQLYmBp.png"
+          title="Lashkar Gah"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+          Lashkar Gah
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
+          Lashkar Gah is an indica landrace strain named after its geographic origin in south Afghanistan. 
+          Like other Afghani indicas, Lashkar Gah is consistent in its delivery of powerful, sedating effects 
+          that promote rest and relaxation. Pain, insomnia, and other severe symptoms collapse under the 
+          weight of Lashkar Gah’s heavy effects, and a quick examination of its resin-caked buds explains this 
+          indica’s potency.
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Button size="large" color="error">
+      <Link component={Link1} to="/seeds/lashkar-gah" color="error">
+          Pollen
+        </Link>
+        </Button>
+      </CardActions>
+    </Card>
+        </Grid>
+        <Grid item xs={3}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://i.imgur.com/DemC3fz.png"
+          title="Afghani"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+          Afghani
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
+          Afghani is a heavy indica strain named after its geographic origin, where the earliest 
+          varieties of cannabis are believed to have grown. Breeders worldwide have come to treasure 
+          Afghani for its heavy resin production which is passed on genetically. 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Button size="large" color="error">
+      <Link component={Link1} to="/seeds/afghani" color="error">
+          Pollen
+        </Link>
+        </Button>
+      </CardActions>
+    </Card>
+        </Grid>
+        <Grid item xs={3}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://i.imgur.com/lE9RG6a.png"
+          title="Mazar i Sharif"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+          Mazar i Sharif
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
+          A legendary strain grown in the far north of Afghanistan.  In fertile and well-irrigated 
+          soils these vigorous giants are capable of reaching 4 metres in height or more, and will 
+          produce a similarly immense yield of intensely resinous flowers.  Over-indulgence produces 
+          a mind-warping, immobilising and narcotic effect. 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+      <Button size="large" color="error">
+      <Link component={Link1} to="/seeds/mazar-i-sharif" color="error">
+          Pollen
         </Link>
         </Button>
       </CardActions>

@@ -331,7 +331,6 @@ class App extends Component {
             <Route path="/faq" component={FAQPage} />
             <Route path="/accounting" component={Stats} />
             <Route path="/tutorial" component={Tutorial} />
-            <Route path="/market/MarketSupplies" component={MarketSupplies} />
             <Route path="/trending" component={Trending} />
             <Route path="/streams" component={TwitchStreams} />
             <Route path="/growers" component={BoardMemberApp} />  
