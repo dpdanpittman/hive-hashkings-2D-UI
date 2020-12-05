@@ -953,7 +953,7 @@ export default function TradingFloor() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          Hindu Kush
+          Hindu Kush Pollen
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.font}>
           Hindu Kush is a pure indica strain named after the mountain range stretching 500 miles 
@@ -965,7 +965,7 @@ export default function TradingFloor() {
       </CardActionArea>
       <CardActions>
       <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/hindu-kush" color="error">
+      <Link component={Link1} to="/pollen/hindu-kush-pollen" color="error">
           Pollen
         </Link>
         </Button>
@@ -995,7 +995,7 @@ export default function TradingFloor() {
       </CardActionArea>
       <CardActions>
       <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/lashkar-gah" color="error">
+      <Link component={Link1} to="/pollen/lashkar-gah-pollen" color="error">
           Pollen
         </Link>
         </Button>
@@ -1023,7 +1023,7 @@ export default function TradingFloor() {
       </CardActionArea>
       <CardActions>
       <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/afghani" color="error">
+      <Link component={Link1} to="/pollen/afghani-pollen" color="error">
           Pollen
         </Link>
         </Button>
@@ -1052,7 +1052,7 @@ export default function TradingFloor() {
       </CardActionArea>
       <CardActions>
       <Button size="large" color="error">
-      <Link component={Link1} to="/seeds/mazar-i-sharif" color="error">
+      <Link component={Link1} to="/pollen/mazar-i-sharif-pollen" color="error">
           Pollen
         </Link>
         </Button>
