@@ -356,7 +356,7 @@ class App extends Component {
             <Route path="/seeds/aceh" component={Aceh} />
 
             <Route path="/pollen/colombian-gold" component={ColombianGoldpollen} />
-            <Route path="/pollen/lashkar-gah" component={LashkarGahPollen} />
+            <Route path="/pollen/lashkar-gah-pollen" component={LashkarGahPollen} />
             <Route path="/pollen/chocolate-thai" component={ChocolateThaipollen} />
             <Route path="/pollen/thai" component={Thaipollen} />
             <Route path="/pollen/swazi-gold" component={SwaziGoldpollen} />
@@ -366,11 +366,11 @@ class App extends Component {
             <Route path="/pollen/acapulco-gold" component={AcapulcoGoldpollen} />
             <Route path="/pollen/durban-poison" component={DurbanPoisonpollen} />
             <Route path="/pollen/lambs-bread" component={LambsBreadpollen} />
-            <Route path="/pollen/mazar-i-sharif" component={MazariSharifPollen} />
-            <Route path="/pollen/hindu-kush" component={HinduKushPollen} />
+            <Route path="/pollen/mazar-i-sharif-pollen" component={MazariSharifPollen} />
+            <Route path="/pollen/hindu-kush-pollen" component={HinduKushPollen} />
             <Route path="/pollen/panama-red" component={PanamaRedpollen} />
             <Route path="/pollen/aceh" component={Acehpollen} />
-            <Route path="/pollen/afghani" component={AfghaniPollen} />
+            <Route path="/pollen/afghani-pollen" component={AfghaniPollen} />
 
             <Route path="/plots/Afghanistan" component={Afghanistan} />
             <Route path="/plots/Africa" component={Africa} />
