@@ -99,7 +99,8 @@ export const AppInlineProfile = () => {
 const logOut = () => {
   api.revokeToken(function(err, res) {
       if (res && res.success) {
-          username = null;
+          this.username = null;
+          localStorage.removeItem('sc_token');
           document.location.href = '/login';
       }
   });
