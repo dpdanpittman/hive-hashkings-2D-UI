@@ -182,7 +182,7 @@ const logOut = () => {
         </Avatar>}
         label= {username}
         color="primary"
-        //onDelete={logOut}
+        onDelete={logOut}
         //onClick={handleOpen}
         className={classes.font}
       />
