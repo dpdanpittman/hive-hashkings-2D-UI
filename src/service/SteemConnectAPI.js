@@ -6,7 +6,7 @@ const api = new hivesigner.Client({
   callbackURL:
     process.env.REACT_APP_SC_CALLBACK || "https://www.hashkings.app/callback",
   scope: ["custom_json", "login", "logout"],
-  accessToken: token
+  accessToken: "sc_token"
 });
 
 export default api;
