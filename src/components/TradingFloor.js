@@ -467,7 +467,7 @@ export default function TradingFloor() {
           <Tab className={classes.fontDark} label="Pollen" {...a11yProps(1)} />
           <Tab className={classes.fontDark} label="Farm Plots" {...a11yProps(2)} />
           <Tab className={classes.fontDark} label="Services" {...a11yProps(3)} disabled/>
-          <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} disabled/>
+          <Tab className={classes.fontDark} label="Tools" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
         <TabPanel value={value} index={0} dir={theme.direction}>
