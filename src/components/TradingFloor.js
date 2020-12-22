@@ -142,6 +142,8 @@ export default function TradingFloor() {
     if (username) {
       setIsSubmitting(true);
 
+      console.log("our username is" + username)
+
       const memo = `papers`;
       const to = "hashkings";
       const amount = seedTypes["t"].str;
