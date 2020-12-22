@@ -144,7 +144,7 @@ export default function TradingFloor() {
 
       const memo = `papers`;
       const to = "hashkings";
-      const amount = "5";
+      const amount = seedTypes["t"].str;
       const currency = "HIVE";
 
       if (hasHiveKeychain()) {
@@ -168,7 +168,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setTool();
+          setSeed();
         } catch {
           setIsSubmitting(false);
         }
@@ -183,7 +183,7 @@ export default function TradingFloor() {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
+            : "https://localhost:3000/markets"
         );
       }
     }
@@ -220,7 +220,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setTool();
+          setSeed();
         } catch {
           setIsSubmitting(false);
         }
@@ -235,7 +235,7 @@ export default function TradingFloor() {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
+            : "https://localhost:3000/markets"
         );
       }
     }
@@ -272,7 +272,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setTool();
+          setSeed();
         } catch {
           setIsSubmitting(false);
         }
@@ -287,7 +287,7 @@ export default function TradingFloor() {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
+            : "https://localhost:3000/markets"
         );
       }
     }
@@ -324,7 +324,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setTool();
+          setSeed();
         } catch {
           setIsSubmitting(false);
         }
@@ -376,7 +376,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setTool();
+          setSeed();
         } catch {
           setIsSubmitting(false);
         }
@@ -392,58 +392,6 @@ export default function TradingFloor() {
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/markets`
             : "https://localhost:3000/markets"
-        );
-      }
-    }
-  };  
-
-  const handleWrapsSubmit = async k => {
-    k.preventDefault();
-    if (username) {
-      setIsSubmitting(true);
-
-      const memo = `hempwraps`;
-      const to = "hashkings";
-      const amount = seedTypes["t"].str;
-      const currency = "HIVE";
-
-      if (hasHiveKeychain()) {
-        const hive_keychain = window.hive_keychain;
-        try {
-          await new Promise((resolve, reject) => {
-            return hive_keychain.requestTransfer(
-              username,
-              to,
-              amount,
-              memo,
-              currency,
-              response => {
-                if (response.success) {
-                  resolve(response);
-                } else {
-                  reject();
-                }
-              },
-              true
-            );
-          });
-          setIsSubmitting(false);
-          setTool();
-        } catch {
-          setIsSubmitting(false);
-        }
-      } else {
-        window.location.href = sign(
-          "transfer",
-          {
-            to,
-            from: username,
-            amount: `${amount} ${currency}`,
-            memo
-          },
-          process.env.REACT_APP_URL
-            ? `${process.env.REACT_APP_URL}/markets`
-            : "http://localhost:3000/markets"
         );
       }
     }
