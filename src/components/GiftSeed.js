@@ -51,7 +51,6 @@ const hashkingsApi = new HashkingsAPI();
 
 export default function GiftSeed() {
   const classes = useStyles();
-  const {username} = useContext(StateContext);
   const [seed, setSeed] = useState();
   const [to, setTo] = useState("");
   const [validatedTo, setValidatedTo] = useState();

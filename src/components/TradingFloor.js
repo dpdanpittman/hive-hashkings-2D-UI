@@ -18,7 +18,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import {Button} from "primereact/button";
+import Button from '@material-ui/core/Button';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import { Parallax } from 'react-parallax';
@@ -396,10 +396,6 @@ export default function TradingFloor() {
       }
     }
   };  
-
-  let buttonLabel = "Purchase Papers";
-  if (isSubmitting) buttonLabel = "Purchasing";
-  if (!username) buttonLabel = "Please Sign in";
 
   if (username) {
   return (
@@ -1278,11 +1274,9 @@ export default function TradingFloor() {
       <CardActions>
         <Grid container spacing={1}>
           <Grid xs>
-        <Button
-              disabled={isSubmitting || !username}
-              label={buttonLabel}
-              onClick={handlePaperSubmit}
-              />
+      <Button size="large" color="error" onClick={handlePaperSubmit}>
+          <font color="white">Purchase Papers</font>
+        </Button>
         </Grid>
         <Grid xs>
         <Button size="large" color="error" onClick={handleBluntSubmit}>
