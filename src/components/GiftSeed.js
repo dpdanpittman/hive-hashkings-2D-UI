@@ -59,60 +59,6 @@ export default function GiftSeed() {
   const growl = useRef(null);
   const seedBackground = "https://i.imgur.com/z2A9PtG.jpg";
 
-  const [userSeeds, setUserSeeds] = useState([]);
-
-  useEffect(() => {
-    hashkingsApi.getUserGarden(username).then(garden => {
-      setUserSeeds(garden.availableSeeds);
-    });
-  }, [username]);
-
-  const gifted = error => {
-    if (error) {
-      growl.current.show({
-        severity: "error",
-        summary: "Sorry, something went wrong",
-        detail: "Please try again"
-      });
-    }
-    setIsSubmitting(false);
-  };
-
-  useEffect(() => {
-    hashkingsApi.steemUserExists(to).then(username => {
-      if (username && username === to) {
-        setValidatedTo(username);
-      } else {
-        setValidatedTo();
-      }
-    });
-  }, [to]);
-
-  const handleSubmit = async () => {
-    if (validatedTo && username && seed) {
-      setIsSubmitting(true);
-
-      const custom_json_id = "qwoyn_give_seed";
-      const custom_JSON = JSON.stringify({
-        to: validatedTo,
-        seed: seed.strain,
-        qual: seed.xp
-      });
-
-      steemConnectAPI.customJson(
-        [],
-        [username],
-        custom_json_id,
-        custom_JSON,
-        gifted
-      );
-    }
-  };
-
-  let buttonLabel = "Gift";
-  if (isSubmitting) buttonLabel = "Gifting";
-  if (!username) buttonLabel = "Please Login to gift seeds";
-
   return (
     <Parallax blur={1} bgImage={seedBackground} strength={1000}>
       <TradingFloor />
