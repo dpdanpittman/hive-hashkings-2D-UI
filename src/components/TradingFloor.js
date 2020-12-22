@@ -137,7 +137,7 @@ export default function TradingFloor() {
     setValue(index);
   };
 
-  const handleSubmit = async e => {
+  const handlePaperSubmit = async e => {
     e.preventDefault();
     if (username) {
       setIsSubmitting(true);
@@ -1326,7 +1326,7 @@ export default function TradingFloor() {
       <CardActions>
         <Grid container spacing={1}>
           <Grid xs>
-      <Button size="large" color="error" onClick={handleSubmit}>
+      <Button size="large" color="error" onClick={handlePaperSubmit}>
           <font color="white">Purchase Papers</font>
         </Button>
         </Grid>
