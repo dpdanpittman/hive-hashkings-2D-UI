@@ -168,7 +168,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setSeed();
+          setTool();
         } catch {
           setIsSubmitting(false);
         }
@@ -220,7 +220,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setSeed();
+          setTool();
         } catch {
           setIsSubmitting(false);
         }
@@ -272,7 +272,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setSeed();
+          setTool();
         } catch {
           setIsSubmitting(false);
         }
@@ -324,7 +324,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setSeed();
+          setTool();
         } catch {
           setIsSubmitting(false);
         }
@@ -376,7 +376,7 @@ export default function TradingFloor() {
             );
           });
           setIsSubmitting(false);
-          setSeed();
+          setTool();
         } catch {
           setIsSubmitting(false);
         }
