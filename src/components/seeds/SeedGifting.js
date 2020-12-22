@@ -235,7 +235,7 @@ export default function SeedGifting() {
                       <h2>{validatedTo}</h2>
                       <img
                         alt="avatar"
-                        src={`https://steemitimages.com/u/${validatedTo}/avatar/small`}
+                        src={`https://images.hive.blog/u/${validatedTo}/avatar/small`}
                       />
                     </div>
                   )}

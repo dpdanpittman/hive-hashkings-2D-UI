@@ -172,7 +172,7 @@ export const Aceh = () => {
           },
           process.env.REACT_APP_URL
             ? `${process.env.REACT_APP_URL}/market/seedbank`
-            : "http://localhost:3000/market/seedbank"
+            : "http://localhost:3000/markets"
         );
       }
     }

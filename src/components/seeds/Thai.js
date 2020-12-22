@@ -171,8 +171,8 @@ export const Thai = () => {
             memo
           },
           process.env.REACT_APP_URL
-            ? `${process.env.REACT_APP_URL}/market/seedbank`
-            : "http://localhost:3000/market/seedbank"
+            ? `${process.env.REACT_APP_URL}/markets`
+            : "http://localhost:3000/markets"
         );
       }
     }
