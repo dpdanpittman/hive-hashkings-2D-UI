@@ -21,7 +21,7 @@ export default function MediaCard() {
   return (
     <Paper className={classes.paper}>
       <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ju9c5_wqUcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/X2p6qFT_Zjg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
     </Paper>
   );
