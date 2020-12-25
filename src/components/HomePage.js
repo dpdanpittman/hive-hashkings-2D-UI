@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import { Redirect } from 'react-router';
 import { Parallax } from 'react-parallax';
 import TrendingHomePage from './TrendingHomePage';
-import DialogPage from './DialogPage';
+import TutorialCard from './TutorialCard';
 
 const useStyles = makeStyles(theme => ({
   navWidth: {
