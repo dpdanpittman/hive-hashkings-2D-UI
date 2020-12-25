@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(1),
-    textAlign: 'left',
+    textAlign: 'center',
     color: theme.palette.text.secondary,
     whiteSpace: 'wrap',
     marginBottom: theme.spacing(1),
@@ -41,7 +41,6 @@ export default function TutorialCard() {
 
   return (
     <Paper className={classes.paper}>
-      <center>
           <Typography gutterBottom variant="h2" component="h2" className={classes.font}>
             <u>New to Hashkings?</u>
           </Typography>
@@ -50,7 +49,6 @@ export default function TutorialCard() {
         <GerminateIconBlack /> 
       </IconButton>Visit the tutorial!
         </Link>
-        </center>
       </Paper>
   );
 }
