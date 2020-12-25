@@ -84,12 +84,18 @@ if (!isDesktop) {
           <WelcomeCard />
           <br/>
         </Grid>
+        <br/>
+      <hr/>
+      <br/>
         <Grid container spacing={3}>
       <Grid item xs={12}> 
       <br/>
       <TutorialCard />
       <br/>
       </Grid>
+      <br/>
+      <hr/>
+      <br/>
       <Grid item xs={3}>
       </Grid>
       <Grid item xs={3}>
