@@ -20,6 +20,15 @@ const useStyles = makeStyles({
   font: {
     fontFamily: '"Jua", sans-serif',
   },
+  paper: {
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+    whiteSpace: 'wrap',
+    marginBottom: theme.spacing(1),
+    backgroundColor: "transparent",
+    fontFamily: '"Jua", sans-serif'
+  }
 });
 
 // The use of React.forwardRef will no longer be required for react-router-dom v6.
@@ -30,9 +39,9 @@ export default function TutorialCard() {
   const classes = useStyles();
 
   return (
-    <Paper>
+    <Paper className={classes.paper}>
       <center>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+          <Typography gutterBottom variant="h2" component="h2" className={classes.font}>
             <u>New to Hashkings?</u>
           </Typography>
           <Link component={Link1} to="/tutorial">
