@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
   font: {
     fontFamily: '"Jua", sans-serif',
+    color: "#FFCD33",
   },
   paper: {
     padding: theme.spacing(1),
