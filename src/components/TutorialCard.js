@@ -44,11 +44,11 @@ export default function TutorialCard() {
           <Typography gutterBottom variant="h2" component="h2" className={classes.font}>
             <u>New to Hashkings?</u>
           </Typography>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
           <Link component={Link1} to="/tutorial">
-        <IconButton color="primary" aria-label="Visit Tutorial">
-        <GerminateIconBlack /> 
-      </IconButton>Visit the tutorial!
+        Visit the tutorial!
         </Link>
+        </Typography>
       </Paper>
   );
 }
