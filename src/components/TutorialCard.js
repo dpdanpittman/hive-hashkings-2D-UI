@@ -7,7 +7,7 @@ import { GerminateIconBlack } from './Icons';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 345,
     minWidth: 250,
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     backgroundColor: "transparent",
     fontFamily: '"Jua", sans-serif'
   }
-});
+}));
 
 // The use of React.forwardRef will no longer be required for react-router-dom v6.
 // See https://github.com/ReactTraining/react-router/issues/6056
