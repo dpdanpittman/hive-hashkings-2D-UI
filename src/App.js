@@ -74,9 +74,9 @@ import Stats from "./components/Stats";//          Mh..          +MMMMMM        
 import ReactGA from 'react-ga';//                  .MMM.         .MMMMML.          MMMMMh      
 import Trending from './components/Trending';//     )MMMh.        MMMMMM         MMMMMMM       
 //                                                   3MMMMx.     'MMMMMMf      xnMMMMMM"       
-const trackingID ="UA-111263990-4"//                 '*MMMMM      MMMMMM.     nMMMMMMP"        
+const trackingID ="G-VVCEFZKLKH"//                   '*MMMMM      MMMMMM.     nMMMMMMP"        
 //                                                     *MMMMMx    "MMMMM\    .MMMMMMM=         
-ReactGA.initialize('UA-111263990-4', {//                *MMMMMh   "MMMMM"   JMMMMMMP           
+ReactGA.initialize('G-VVCEFZKLKH', {//                  *MMMMMh   "MMMMM"   JMMMMMMP           
   debug: true,//                                          MMMMMM   3MMMM.  dMMMMMM            .
   titleCase: false,//                                      MMMMMM  "MMMM  .MMMMM(        .nnMP"
 });//                                          =..          *MMMMx  MMM"  dMMMM"    .nnMMMMM*  
