@@ -148,21 +148,21 @@ export const MarketPlots = () => {
             />
             <CardContent>
               <Typography color="textSecondary" gutterBottom variant="h5" component="h2" className={classes.font}>
-                <font color="DFB17B">
-                Plot Credits
+                <font color="red">
+                Purchasing Plot credits has been discontinued during our upgrade! Come back Soon!!
                 </font>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}>To gain access to one of the farm plots you will need to have plot credits.</font>
+              {/*<font color="DFB17B" className={classes.font}>To gain access to one of the farm plots you will need to have plot credits.</font>*/}
               </Typography>
               <hr/>
               <br/>
               <br/>
-              <Delegate
+              {/*<Delegate
                   username={username}
                   delegation={delegation}
                   updateDelegation={updateDelegation}
-                />
+              />*/}
           </CardContent>
         </Card>
         </Box>

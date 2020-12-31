@@ -1033,9 +1033,6 @@ export default function TradingFloor() {
           strains landraces.
           </Typography>
           <br/>
-          <Typography variant="body3" color="textSecondary" component="p" className={classes.font}>
-          Bailey Rahn - January 30, 2014
-          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>

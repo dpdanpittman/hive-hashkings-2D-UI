@@ -173,11 +173,11 @@ export const MarketPlots = () => {
       <CardContent>
       <Divider variant="middle" />
       <br/>
-        <Delegate
+        {/*<Delegate
               username={username}
               delegation={delegation}
               updateDelegation={updateDelegation}
-            />
+            />*/}
       <Divider variant="middle" />
       </CardContent>
     </Collapse>
@@ -191,9 +191,14 @@ export const MarketPlots = () => {
         would like to get a plot you will need to delegate 20 Hive Power.  Learn more about delegation <a href="https://hive.blog/passive-investment/@shortsegments/delegation-explained#:~:text=Delegation%20is%20a%20passive%20investment,content%20on%20the%20Hive%20blockchain.&text=The%20people%20or%20businesses%20you,they%20then%20share%20with%20you.">here</a>
         </font>
       </Typography>
-      <Typography paragraph className={classes.font}>
+      <Typography color="textSecondary" gutterBottom variant="h2" component="h2" className={classes.font}>
+                <font color="red">
+                Purchasing Plot credits has been discontinued during our upgrade! Come back Soon!!
+                </font>
+              </Typography>
+      {/*<Typography paragraph className={classes.font}>
         <font color="DFB17B">Please expand the Delegation Card and choose the number of plots you would like click Delegate and verify the transaction.</font>
-      </Typography>
+      </Typography>*/}
       <Typography paragraph>
         <font color="red" className={classes.font}>Click next when you are finished!</font>
       </Typography>
