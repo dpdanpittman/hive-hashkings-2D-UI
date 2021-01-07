@@ -78,37 +78,6 @@ export default function DesktopTopbar(){
             </IconButton>
             </HtmlTooltip>
             </Grid>
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Visit your Farm</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/farm">
-            <CareIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Market</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/markets">
-            <StoreIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
 
             <Grid item xs={1}>
             <HtmlTooltip
@@ -138,22 +107,6 @@ export default function DesktopTopbar(){
               >
             <IconButton className="layout-menu-button" component={Link1} to="/trending">
             <BlogIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Learn to Play</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/tutorial">
-            <TutorialIcon />
             </IconButton>
             </HtmlTooltip>
             </Grid> 

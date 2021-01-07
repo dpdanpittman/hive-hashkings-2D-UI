@@ -103,13 +103,13 @@ if (!isDesktop) {
       </Grid>
     </Grid>
         <Grid item xs={3}>
-          <MediaCard />
+     
         </Grid>
         <Grid item xs={6}>
           <InsideCard />
         </Grid>
         <Grid item xs={3}>
-          <MarketCard />
+         
         </Grid>
       </Grid>
       <br/>

@@ -180,25 +180,8 @@ class App extends Component {
         label: "Farm",
         items: [
           {
-            label: "Fields",
-            to: "/farm"
-          },
-          {
             label: "Office",
             to: "/accounting"
-          },
-        ]
-      },
-      {
-        label: "Market",
-        items: [
-          {
-            label: "Farm Plots",
-            to: "/market/farmplots"
-          },
-          {
-            label: "Seeds",
-            to: "/market/seedbank"
           },
         ]
       },
@@ -323,61 +306,12 @@ class App extends Component {
           <div className="layout-main">
             <Route path="/login" component={LoginPage} />
             <Route path="/" exact component={HomePage} />
-            <Route path="/garden/:username" component={UserGarden} />
-            <Route exact path="/farm" component={GardenPage} />
-            <Route path="/market/farmplots" component={MarketPlots} />
-            <Route path="/market/seedbank" component={MarketSeeds} />
             <Route path="/callback" component={SCCallback} />
             <Route path="/faq" component={FAQPage} />
             <Route path="/accounting" component={Stats} />
-            <Route path="/tutorial" component={Tutorial} />
             <Route path="/trending" component={Trending} />
-            <Route path="/streams" component={TwitchStreams} />
-            <Route path="/growers" component={BoardMemberApp} />  
             <Route path="/home" component={HomePage} />
-            <Route path="/markets" component={GiftSeed} />
 
-            <Route path="/seeds/steem-og" component={SteemOG} />
-            <Route path="/seeds/afghani" component={Afghani} />
-            <Route path="/seeds/colombian-gold" component={ColombianGold} />
-            <Route path="/seeds/lashkar-gah" component={LashkarGah} />
-            <Route path="/seeds/chocolate-thai" component={ChocolateThai} />
-            <Route path="/seeds/thai" component={Thai} />
-            <Route path="/seeds/swazi-gold" component={SwaziGold} />
-            <Route path="/seeds/malawi" component={Malawi} />
-            <Route path="/seeds/kings-bread" component={KingsBread} />
-            <Route path="/seeds/kilimanjaro" component={Kilimanjaro} />
-            <Route path="/seeds/acapulco-gold" component={AcapulcoGold} />
-            <Route path="/seeds/durban-poison" component={DurbanPoison} />
-            <Route path="/seeds/lambs-bread" component={LambsBread} />
-            <Route path="/seeds/mazar-i-sharif" component={MazariSharif} />
-            <Route path="/seeds/hindu-kush" component={HinduKush} />
-            <Route path="/seeds/panama-red" component={PanamaRed} />
-            <Route path="/seeds/aceh" component={Aceh} />
-
-            <Route path="/pollen/colombian-gold" component={ColombianGoldpollen} />
-            <Route path="/pollen/lashkar-gah-pollen" component={LashkarGahPollen} />
-            <Route path="/pollen/chocolate-thai" component={ChocolateThaipollen} />
-            <Route path="/pollen/thai" component={Thaipollen} />
-            <Route path="/pollen/swazi-gold" component={SwaziGoldpollen} />
-            <Route path="/pollen/malawi" component={Malawipollen} />
-            <Route path="/pollen/kings-bread" component={KingsBreadpollen} />
-            <Route path="/pollen/kilimanjaro" component={Kilimanjaropollen} />
-            <Route path="/pollen/acapulco-gold" component={AcapulcoGoldpollen} />
-            <Route path="/pollen/durban-poison" component={DurbanPoisonpollen} />
-            <Route path="/pollen/lambs-bread" component={LambsBreadpollen} />
-            <Route path="/pollen/mazar-i-sharif-pollen" component={MazariSharifPollen} />
-            <Route path="/pollen/hindu-kush-pollen" component={HinduKushPollen} />
-            <Route path="/pollen/panama-red" component={PanamaRedpollen} />
-            <Route path="/pollen/aceh" component={Acehpollen} />
-            <Route path="/pollen/afghani-pollen" component={AfghaniPollen} />
-
-            <Route path="/plots/Afghanistan" component={Afghanistan} />
-            <Route path="/plots/Africa" component={Africa} />
-            <Route path="/plots/Asia" component={Asia} />
-            <Route path="/plots/Central-America" component={CentralAmerica} />
-            <Route path="/plots/Jamaica" component={Jamaica} />
-            <Route path="/plots/Mexico" component={Mexico} />
           </div>
           <div className="layout-mask"></div>
         </div> 
