@@ -45,9 +45,9 @@ export default function TutorialCard() {
             <u>Hashkings is Going through a Major Upgrade. Stay tuned and click the link below to learn more!</u>
           </Typography>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          <Link component={Link1} to="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
+          <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
         Learn more at peakd.com
-        </Link>
+        </a>
         </Typography>
       </Paper>
   );
