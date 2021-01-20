@@ -96,7 +96,7 @@ export default function Trending() {
         return (
           <GridListTile key={post.post_id} cols={post.title ? 2 : 1} rows={post.title ? 2 : 1}>
             <img src={images && images.length > 0 ? images[0] : "https://i.imgur.com/plwe4uc.png"} alt="Hashkings Logo" />
-            <a href={"https://www.steempeak.com/@" + post.author + "/" + post.permlink} target="_blank" rel="noopener noreferrer">
+            <a href={"https://www.peakd.com/@" + post.author + "/" + post.permlink} target="_blank" rel="noopener noreferrer">
             <GridListTileBar
               title={post.title}
               titlePosition="top"
