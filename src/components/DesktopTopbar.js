@@ -83,22 +83,6 @@ export default function DesktopTopbar(){
             <HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}>Accounting</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/accounting">
-            <FarmTopbarIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
                   <Typography color="error" className={classes.font}>Trending Posts</Typography>
                 </React.Fragment>
               }
@@ -108,42 +92,6 @@ export default function DesktopTopbar(){
             <IconButton className="layout-menu-button" component={Link1} to="/trending">
             <BlogIcon />
             </IconButton>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Become a Patron</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <a href="https://www.patreon.com/hashkings" target="_default">    
-            <IconButton className="layout-menu-button">
-            <PatreonIcon />
-            </IconButton>
-            </a>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Support us on Fundition</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <a href="https://gaming.fundition.io/#!/@hashkings/vni1ql2j5" target="_default">    
-            <IconButton className="layout-menu-button">
-            <FunditionIcon />
-            </IconButton>
-            </a>
             </HtmlTooltip>
             </Grid> 
 
