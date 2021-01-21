@@ -88,6 +88,7 @@ const [seedAfghanistanPrices, setAfghanistanPrices] = useState([0]);
 const [seedJamaicaPrices, setJamaicaPrices] = useState([0]);
 const [seedMexicoPrices, setMexicoPrices] = useState([0]);
 const [seedSouthAmericaPrices, setSouthAmericaPrices] = useState([0]);
+const hasHiveKeychain = useHiveKeychain();
 
 const loadPriceData = async () => {
     
