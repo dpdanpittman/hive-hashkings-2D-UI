@@ -6,6 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import { GerminateIconBlack } from './Icons';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -40,8 +42,10 @@ export default function TutorialCard() {
   const classes = useStyles();
 
   return (
+    <Container fixed>
+    <Grid container spacing={3}>
     <Paper className={classes.paper}>
-          <Typography gutterBottom variant="h2" component="h2" className={classes.font}>
+          <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
             <u>Coming Soon!</u>
           </Typography>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
@@ -50,5 +54,7 @@ export default function TutorialCard() {
         </a>
         </Typography>
       </Paper>
+    </Grid>
+    </Container>
   );
 }
