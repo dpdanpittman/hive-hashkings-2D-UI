@@ -436,12 +436,6 @@ if (!isDesktop) {
     
       <Container fixed>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <WelcomeCard />
-          <br/>
-        </Grid>
-        
-        <Grid container spacing={3}>
       <Grid item xs={12}> 
       <br/>
       <hr/>
@@ -450,8 +444,14 @@ if (!isDesktop) {
       <TutorialCard />
       <br/>
       </Grid>
+      
+        <Grid item xs={12}>
+          <WelcomeCard />
+          <br/>
+        </Grid>
+        
+        <Grid container spacing={3}>
       <br/>
-      <hr/>
       <br/>
       <Grid item xs={3}>
       </Grid>
