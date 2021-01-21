@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {StateContext} from "../App";
 import {sign} from "hivesigner";
 import Grid from '@material-ui/core/Grid';
@@ -12,6 +12,7 @@ import { Redirect } from 'react-router';
 import { Parallax } from 'react-parallax';
 import TrendingHomePage from './TrendingHomePage';
 import TutorialCard from './TutorialCard';
+import useHiveKeychain from "../hooks/useHiveKeychain"; 
 
 const useStyles = makeStyles(theme => ({
   navWidth: {
