@@ -44,6 +44,9 @@ export default function TutorialCard() {
   return (
     <Container fixed>
     <Grid container spacing={3}>
+      <Grid xs={4}>
+        </Grid>
+        <Grid xs={4}>
     <Paper className={classes.paper}>
           <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
             <u>Coming Soon!</u>
@@ -54,6 +57,9 @@ export default function TutorialCard() {
         </a>
         </Typography>
       </Paper>
+      </Grid>
+      <Grid xs={4}>
+        </Grid>
     </Grid>
     </Container>
   );
