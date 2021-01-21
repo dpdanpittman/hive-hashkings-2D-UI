@@ -42,7 +42,7 @@ export default function TutorialCard() {
   return (
     <Paper className={classes.paper}>
           <Typography gutterBottom variant="h2" component="h2" className={classes.font}>
-            <u>Hashkings is Going through a Major Upgrade. Stay tuned and click the link below to learn more!</u>
+            <u>Coming Soon!</u>
           </Typography>
           <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
           <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
