@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {StateContext} from "../../App";
+import {sign} from "hivesigner";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import MediaCard from './FarmingCard';
@@ -69,8 +71,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const HomePage = () => {
+const {username} = useContext(StateContext);
 const classes = useStyles();
 const isDesktop = window.innerWidth < 1000;
+const [isSubmitting, setIsSubmitting] = useState(false);
 const image1 = "https://i.imgur.com/j2CGYh2.jpg";
 const [seedAsia, setSeedAsia] = useState();
 const [seedAfrica, setSeedAfrica] = useState();
