@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {StateContext} from "../../App";
+import {StateContext} from "../App";
 import {sign} from "hivesigner";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
