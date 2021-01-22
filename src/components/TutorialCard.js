@@ -10,15 +10,6 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
-  card: {
-    maxWidth: 345,
-    minWidth: 250,
-    background: "#DFB17B",
-    fontFamily: '"Jua", sans-serif',
-  },
-  media: {
-    height: 140,
-  },
   font: {
     fontFamily: '"Jua", sans-serif',
     color: "#FFCD33",
@@ -33,10 +24,6 @@ const useStyles = makeStyles(theme => ({
     fontFamily: '"Jua", sans-serif'
   }
 }));
-
-// The use of React.forwardRef will no longer be required for react-router-dom v6.
-// See https://github.com/ReactTraining/react-router/issues/6056
-const Link1 = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...props} />);
 
 export default function TutorialCard() {
   const classes = useStyles();
