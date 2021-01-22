@@ -515,10 +515,6 @@ if (!isDesktop) {
     </div>
     </Parallax>
   );
- } else {
-  return (
-    <Redirect to='/login'/>
-    );
-  }
+ } 
 };
 
