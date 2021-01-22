@@ -440,17 +440,14 @@ const handleSubmitSouthAmerica = async e => {
       <br/>
       <br/>
       <TutorialCard />
-      <br/>
-      <br/>
-      <br/>
       </Grid>
 
-        <Grid item xs={12}>
-          <WelcomeCard />
-          <br/>
-        </Grid>
-        
-        <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <WelcomeCard />
+        <br/>
+      </Grid>
+      
+      <Grid container spacing={3}>
       <br/>
       <br/>
       <Grid item xs={3}>
@@ -514,6 +511,5 @@ const handleSubmitSouthAmerica = async e => {
     </div>
     </Parallax>
   );
-
 };
 
