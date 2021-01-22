@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { ParallaxBanner } from 'react-scroll-parallax';
 
 const useStyles = makeStyles({
   card: {

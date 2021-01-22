@@ -3,8 +3,9 @@ import {StateContext} from "../App";
 import {sign} from "hivesigner";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import MediaCard from './FarmingCard';
-import InsideCard from './InsideCard';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import WelcomeCard from './WelcomeCard';
 import MarketCard from './MarketCard';
 import Container from '@material-ui/core/Container';
@@ -77,18 +78,28 @@ const classes = useStyles();
 const isDesktop = window.innerWidth < 1000;
 const [isSubmitting, setIsSubmitting] = useState(false);
 const image1 = "https://i.imgur.com/j2CGYh2.jpg";
+
 const [seedAsia, setSeedAsia] = useState();
 const [seedAfrica, setSeedAfrica] = useState();
 const [seedAfghanistan, setSeedAfghanistan] = useState();
 const [seedJamaica, setSeedJamaica] = useState();
 const [seedMexico, setSeedMexico] = useState();
 const [seedSouthAmerica, setSeedSouthAmerica] = useState();
+
 const [seedAsiaPrices, setAsiaPrices] = useState([0]);
 const [seedAfricaPrices, setAfricaPrices] = useState([0]);
 const [seedAfghanistanPrices, setAfghanistanPrices] = useState([0]);
 const [seedJamaicaPrices, setJamaicaPrices] = useState([0]);
 const [seedMexicoPrices, setMexicoPrices] = useState([0]);
 const [seedSouthAmericaPrices, setSouthAmericaPrices] = useState([0]);
+
+const [asiaBundles, setAsiaQuantity] = useState([0]);
+const [africaBundles, setAfricaQuantity] = useState([0]);
+const [afghanistanBundles, setAfghanistanQuantity] = useState([0]);
+const [jamaicaBundles, setJamaicaQuantity] = useState([0]);
+const [mexicoBundles, setMexicoQuantity] = useState([0]);
+const [southAmericaBundles, setSouthAmericaQuantity] = useState([0]);
+
 const hasHiveKeychain = useHiveKeychain();
 
 const loadPriceData = async () => {
@@ -105,12 +116,26 @@ const loadPriceData = async () => {
   var seedMexicoPrice = pricedata.stats.prices.mexicoBundle.price;
   var seedSouthAmericaPrice = pricedata.stats.prices.southAmericaBundle.price;
 
+  var asiaBundles = pricedata.stats.supply.land.asia;
+  var africaBundles = pricedata.stats.supply.land.africa;
+  var afghanistanBundles = pricedata.stats.supply.land.afghanistan;
+  var jamaicaBundles = pricedata.stats.supply.land.jamaica;
+  var mexicoBundles = pricedata.stats.supply.land.mexico;
+  var southAmericaBundles = pricedata.stats.supply.land.southAmerica;
+
   setAsiaPrices(seedAsiaPrice);
   setAfricaPrices(seedAfricaPrice);
   setAfghanistanPrices(seedAfghanistanPrice);
   setJamaicaPrices(seedJamaicaPrice);
   setMexicoPrices(seedMexicoPrice);
   setSouthAmericaPrices(seedSouthAmericaPrice);
+
+  setAsiaQuantity(asiaBundles);
+  setAfricaQuantity(africaBundles);
+  setAfghanistanQuantity(afghanistanBundles);
+  setJamaicaQuantity(jamaicaBundles);
+  setMexicoQuantity(mexicoBundles);
+  setSouthAmericaQuantity(southAmericaBundles);
 }
 
 useEffect(() => {
@@ -429,34 +454,184 @@ const handleSubmitSouthAmerica = async e => {
   }
 };
 
+let buttonLabel = "Purchase";
+if (isSubmitting) buttonLabel = "Purchasing";
+
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
     
       <Container fixed>
       <Grid container spacing={3}>
-      <Grid item xs={12}> 
-      <br/>
-      <br/>
-      <br/>
-      <TutorialCard />
+      <Grid item xs={4}> 
+      </Grid>
       </Grid>
 
-        <Grid item xs={12}>
-          <WelcomeCard />
+      <Grid container spacing={3}>
+      <Grid item xs={4}> 
+      <br/>
+      <br/>
+      <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Asia Bundle ({asiaBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                This bundle includes 1 plot in Asia, 1 random Asian Landrace Seed and a level 1 Water Tower.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAsiaPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitAsia}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+
+        <Grid item xs={4}>
+        <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Africa Bundle ({africaBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitAfrica}
+              />
+            </CardContent>
+          </Card>
           <br/>
+        </Grid>
+
+        <Grid item xs={4}>
+        <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Jamaica Bundle ({jamaicaBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitJamaica}
+              />
+            </CardContent>
+          </Card>
+          <br/>
+        </Grid>
         </Grid>
         
         <Grid container spacing={3}>
-      <br/>
-      <br/>
-      <Grid item xs={3}>
+      <Grid item xs={4}> 
+      <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>South America Bundle ({southAmericaBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitSouthAmerica}
+              />
+            </CardContent>
+          </Card>
       </Grid>
-      <Grid item xs={3}>
-      </Grid>
+
+        <Grid item xs={4}>
+        <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Mexico Bundle ({mexicoBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedMexicoPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitMexico}
+              />
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid item xs={4}>
+        <Card className={classes.card} raised={true}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Afghanistan Bundle ({afghanistanBundles})</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                This seed is part of the first round of seeds and extremely rare. 
+                It can be used to make beta seeds.
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfghanistanPrices}</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={isSubmitting || !isSubmitting}
+              label={buttonLabel}
+              onClick={handleSubmitAfghanistan}
+              />
+            </CardContent>
+          </Card>
+        </Grid>
     </Grid>
-        
-      </Grid>
+      
       <br/>
       {/*<hr/>
       <br/>
