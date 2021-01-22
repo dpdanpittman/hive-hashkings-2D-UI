@@ -177,15 +177,6 @@ class App extends Component {
   createMenu() {
     this.menu = [
       {
-        label: "Farm",
-        items: [
-          {
-            label: "Office",
-            to: "/accounting"
-          },
-        ]
-      },
-      {
         label: "Community",
         items: [
           {
@@ -208,10 +199,6 @@ class App extends Component {
             }
           },
         ]
-      },
-      {
-        label: "About",
-        to: "/faq"
       }
     ];
   }
@@ -307,8 +294,6 @@ class App extends Component {
             <Route path="/login" component={LoginPage} />
             <Route path="/" exact component={HomePage} />
             <Route path="/callback" component={SCCallback} />
-            <Route path="/faq" component={FAQPage} />
-            <Route path="/accounting" component={Stats} />
             <Route path="/trending" component={Trending} />
             <Route path="/home" component={HomePage} />
 
