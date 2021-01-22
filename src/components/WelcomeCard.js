@@ -17,7 +17,7 @@ export default function WelcomeCard() {
   return (
     <div>
       <center>
-    <img src="https://i.imgur.com/MQYSNVK.png"></img>
+    <img src="https://i.imgur.com/h5xCq4W.png"></img>
     </center>
     </div>
   );
