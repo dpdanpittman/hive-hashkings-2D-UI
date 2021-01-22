@@ -36,7 +36,7 @@ export default function TutorialCard() {
         <Grid xs={8}>
         <Paper elevation={0} className={classes.paper}>
               <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
-                <u>Coming Soon!</u>
+                Coming Soon!
               </Typography>
               <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
               <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
