@@ -4,7 +4,7 @@ import {sign} from "hivesigner";
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import MediaCard from './FarmingCard';
-import InsideCard from './InsideCard';
+import {Button} from "primereact/button";
 import WelcomeCard from './WelcomeCard';
 import MarketCard from './MarketCard';
 import Container from '@material-ui/core/Container';
