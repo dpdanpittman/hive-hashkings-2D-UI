@@ -47,7 +47,7 @@ export default function TutorialCard() {
       <Grid xs={2}>
         </Grid>
         <Grid xs={8}>
-        <Paper className={classes.paper}>
+        <Paper elevation={0} className={classes.paper}>
               <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
                 <u>Coming Soon!</u>
               </Typography>
