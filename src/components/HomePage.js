@@ -442,12 +442,12 @@ const handleSubmitSouthAmerica = async e => {
       <TutorialCard />
       </Grid>
 
-      <Grid item xs={12}>
-        <WelcomeCard />
-        <br/>
-      </Grid>
-      
-      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <WelcomeCard />
+          <br/>
+        </Grid>
+        
+        <Grid container spacing={3}>
       <br/>
       <br/>
       <Grid item xs={3}>
