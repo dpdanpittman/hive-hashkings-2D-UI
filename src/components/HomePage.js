@@ -429,7 +429,6 @@ const handleSubmitSouthAmerica = async e => {
   }
 };
 
-if (!isDesktop) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
@@ -515,6 +514,6 @@ if (!isDesktop) {
     </div>
     </Parallax>
   );
- } 
+
 };
 
