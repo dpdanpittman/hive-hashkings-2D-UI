@@ -36,8 +36,8 @@ export default function WelcomeCard() {
       <center>
       <ResponsiveImage
       src="https://i.imgur.com/h5xCq4W.png"
-       width={ 1000 }
-       height={ 1000 } />
+       width={ 200 }
+       height={ 200 } />
     </center>
     </div>
   );
