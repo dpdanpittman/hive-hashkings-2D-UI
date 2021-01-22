@@ -276,7 +276,7 @@ class App extends Component {
                 <a href="/">
                 <img
                     alt="Logo"
-                    src="/assets/layout/images/hashkingsbanner.png"
+                    src="https://i.imgur.com/Y8RFKfg.png"
                   />
                   </a>
                   <br/>
@@ -286,7 +286,6 @@ class App extends Component {
                   model={this.menu}
                   onMenuItemClick={this.onMenuItemClick}
                 />
-                <Partners />
               </div>
             </ScrollPanel>
           </div>
