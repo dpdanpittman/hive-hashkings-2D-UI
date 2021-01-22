@@ -442,6 +442,8 @@ if (!isDesktop) {
       <br/>
       <TutorialCard />
       <br/>
+      <br/>
+      <br/>
       </Grid>
 
         <Grid item xs={12}>

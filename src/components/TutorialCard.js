@@ -47,16 +47,16 @@ export default function TutorialCard() {
       <Grid xs={2}>
         </Grid>
         <Grid xs={8}>
-    <Paper className={classes.paper}>
-          <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
-            <u>Coming Soon!</u>
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
-          <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
-        Learn more at peakd.com
-        </a>
-        </Typography>
-      </Paper>
+        <Paper className={classes.paper}>
+              <Typography gutterBottom variant="h1" component="h1" className={classes.font}>
+                <u>Coming Soon!</u>
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2" className={classes.font}>
+              <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
+              Learn more at peakd.com
+              </a>
+              </Typography>
+        </Paper>
       </Grid>
       <Grid xs={2}>
         </Grid>
