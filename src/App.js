@@ -12,7 +12,7 @@ import {MarketSupplies} from "./components/MarketSupplies";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {TwitchStreams} from './components/TwitchStreams.js';
 import { BoardMemberApp } from "./components/BoardMemberApp";
-import { HomePage } from "./components/HomePage";
+import { HomePage } from "./components/HomePageSale.js";
 
 import { MazariSharif } from "./components/seeds/MazariSharif";
 import { PanamaRed } from "./components/seeds/PanamaRed";
