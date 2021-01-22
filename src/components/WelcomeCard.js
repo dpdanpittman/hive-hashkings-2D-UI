@@ -13,7 +13,9 @@ const useStyles = makeStyles({
 
 export default function WelcomeCard() {
   const classes = useStyles();
+  const isDesktop = window.innerWidth < 1000;
 
+if (!isDesktop) {
   return (
     <div>
       <center>
@@ -21,4 +23,13 @@ export default function WelcomeCard() {
     </center>
     </div>
   );
+} else {
+  return (
+    <div>
+      <center>
+    <img src="https://i.imgur.com/Y8RFKfg.png"></img>
+    </center>
+    </div>
+  );
+}
 }
