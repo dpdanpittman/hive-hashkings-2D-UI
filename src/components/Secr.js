@@ -12,6 +12,7 @@ import {Button} from "primereact/button";
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { Parallax } from 'react-parallax';
+import { Redirect } from 'react-router';
 import TrendingHomePage from './TrendingHomePage';
 import TutorialCard from './TutorialCard';
 import useHiveKeychain from "../hooks/useHiveKeychain"; 
