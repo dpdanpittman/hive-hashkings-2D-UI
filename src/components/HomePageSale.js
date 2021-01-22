@@ -464,12 +464,12 @@ if (isSubmitting) buttonLabel = "Purchasing";
     
       <Container fixed>
       <Grid container spacing={3}>
-      <Grid item xs={4}> 
+      <Grid item xs> 
       </Grid>
       </Grid>
 
       <Grid container spacing={3}>
-      <Grid item xs={4}> 
+      <Grid item xs> 
       <br/>
       <br/>
       <Card className={classes.card} raised={true}>
@@ -497,7 +497,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
           </Card>
       </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs>
         <Card className={classes.card} raised={true}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -524,7 +524,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
           <br/>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs>
         <Card className={classes.card} raised={true}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -532,7 +532,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
-              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              This bundle includes 1 plot in Jamaica, 1 Random Jamaican Landrace Seed and a level 1 Water Tower.
               </font>
               </Typography>
               <br/>
@@ -553,7 +553,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
         </Grid>
         
         <Grid container spacing={3}>
-      <Grid item xs={4}> 
+      <Grid item xs> 
       <Card className={classes.card} raised={true}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -561,7 +561,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
-              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              This bundle includes 1 plot in South America, 1 Random South American Landrace Seed and a level 1 Water Tower.
               </font>
               </Typography>
               <br/>
@@ -579,7 +579,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
           </Card>
       </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs>
         <Card className={classes.card} raised={true}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -587,7 +587,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
-              This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+              This bundle includes 1 plot in Mexico, 1 Random Mexican Landrace Seed and a level 1 Water Tower.
               </font>
               </Typography>
               <br/>
@@ -605,7 +605,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
           </Card>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs>
         <Card className={classes.card} raised={true}>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
@@ -624,7 +624,7 @@ if (isSubmitting) buttonLabel = "Purchasing";
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !isSubmitting}
+              disabled={isSubmitting}
               label={buttonLabel}
               onClick={handleSubmitAfghanistan}
               />
