@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const HomePage = () => {
+export const SecretPage = () => {
 const {username} = useContext(StateContext);
 const classes = useStyles();
 const isDesktop = window.innerWidth < 1000;
