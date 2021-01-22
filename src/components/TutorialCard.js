@@ -27,7 +27,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function TutorialCard() {
   const classes = useStyles();
+  const isDesktop = window.innerWidth < 1000;
 
+if(!isDesktop) {
   return (
     <Container fixed>
     <Grid container spacing={3}>
@@ -50,4 +52,24 @@ export default function TutorialCard() {
     </Grid>
     </Container>
   );
+} else {
+  return (
+    <Container fixed>
+    <Grid container spacing={3}>
+        <Grid xs={12}>
+        <Paper elevation={0} className={classes.paper}>
+              <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
+                Coming Soon!
+              </Typography>
+              <Typography gutterBottom variant="h4" component="h4" className={classes.font}>
+              <a href="https://peakd.com/hashkings/@hashkings/hashkings-roadmap-and-pre-sale-announcement">
+              Learn more at peakd.com
+              </a>
+              </Typography>
+        </Paper>
+      </Grid>
+    </Grid>
+    </Container>
+  );
+}
 }
