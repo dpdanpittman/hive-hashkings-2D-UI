@@ -460,14 +460,12 @@ let buttonLabel = "Purchase";
 if (isSubmitting) buttonLabel = "Purchasing";
 if (!username) buttonLabel = "Please Sign in";
 
-if(username) {
+
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
     
       <Container fixed>
-     
-
       <Grid container spacing={3}>
       <Grid item xs> 
       <br/>
@@ -668,10 +666,6 @@ if(username) {
     </div>
     </Parallax>
   );
-} else {
-  return (
-    <Redirect to='/login'/>
-    );
-  }
+
 };
 
