@@ -110,12 +110,12 @@ const loadPriceData = async () => {
   const response = await fetch(urlAPI);
   const pricedata = await response.json();
 
-  var seedAsiaPrice = pricedata.stats.prices.asiaBundle.price;
-  var seedAfricaPrice = pricedata.stats.prices.africaBundle.price;
-  var seedAfghanistanPrice = pricedata.stats.prices.AfghanistanBundle.price;
-  var seedJamaicaPrice = pricedata.stats.prices.jamaicaBundle.price;
-  var seedMexicoPrice = pricedata.stats.prices.mexicoBundle.price;
-  var seedSouthAmericaPrice = pricedata.stats.prices.southAmericaBundle.price;
+  var seedAsiaPrice = pricedata.stats.prices.bundles.asiaBundle;
+  var seedAfricaPrice = pricedata.stats.prices.bundles.africaBundle;
+  var seedAfghanistanPrice = pricedata.stats.prices.bundles.afghanistanBundle;
+  var seedJamaicaPrice = pricedata.stats.prices.bundles.jamaicaBundle;
+  var seedMexicoPrice = pricedata.stats.prices.bundles.mexicoBundle;
+  var seedSouthAmericaPrice = pricedata.stats.prices.bundles.southAmericaBundle;
 
   var asiaBundles = pricedata.stats.supply.land.asia;
   var africaBundles = pricedata.stats.supply.land.africa;
