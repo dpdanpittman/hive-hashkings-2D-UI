@@ -473,8 +473,6 @@ if (!isDesktop) {
       <Container fixed>
       <Grid container spacing={3}>
       <Grid item xs> 
-      <br/>
-      <br/>
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
@@ -689,8 +687,6 @@ if (!isDesktop) {
         <Container fixed>
         <Grid container spacing={3}>
         <Grid item xs> 
-        <br/>
-        <br/>
         <Card className={classes.card} raised={true}>
         <CardMedia
                 className={classes.media}
