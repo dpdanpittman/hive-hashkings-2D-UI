@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: 300,
-    width: 200,
+    width: 250,
   },
   mediaTwo: {
     height: 100,
