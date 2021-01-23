@@ -18,8 +18,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://hive.hashkings.app">
-        Qwoyn.io
+      <Link color="inherit" href="https://www.hashkings.app">
+        Hashkings.app
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

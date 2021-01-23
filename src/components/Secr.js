@@ -65,8 +65,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
   },
   media: {
-    height: 140,
-    width: 270,
+    height: 300,
+    width: 200,
   },
   mediaTwo: {
     height: 100,
@@ -409,7 +409,7 @@ const handleSubmitSouthAmerica = async e => {
   if (username) {
     setIsSubmitting(true);
 
-    const memo = `southAmerica_bundle`;
+    const memo = `southamerica_bundle`;
     const to = "hashkings";
     const amount = seedSouthAmericaPrices.toFixed(3).toString();
     const currency = "HIVE";
@@ -464,6 +464,10 @@ if (!username) buttonLabel = "Please Sign in";
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
+
+      <center>
+        <img src="https://i.imgur.com/LgxQQjM.jpg"></img>
+      </center>
     
       <Container fixed>
       <Grid container spacing={3}>
@@ -473,7 +477,7 @@ if (!username) buttonLabel = "Please Sign in";
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/zLl260v.png"
               title="Market"
             />
             <CardContent>
@@ -504,7 +508,7 @@ if (!username) buttonLabel = "Please Sign in";
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/iWJFmeF.png"
               title="Market"
             />
             <CardContent>
@@ -536,7 +540,7 @@ if (!username) buttonLabel = "Please Sign in";
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/tr2MCTE.png"
               title="Market"
             />
             <CardContent>
@@ -570,7 +574,7 @@ if (!username) buttonLabel = "Please Sign in";
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/JaXNvex.png"
               title="Market"
             />
             <CardContent>
@@ -601,7 +605,7 @@ if (!username) buttonLabel = "Please Sign in";
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/sh8hqAi.png"
               title="Market"
             />
             <CardContent>
@@ -632,7 +636,7 @@ if (!username) buttonLabel = "Please Sign in";
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/dtRKgF0.png"
               title="Market"
             />
             <CardContent>

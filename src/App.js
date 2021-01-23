@@ -68,7 +68,7 @@ import "./App.scss";//                                              M
 import steemConnectAPI from "./service/SteemConnectAPI";//         dM     
 import SCCallback from "./components/SCCallback";//                MMr
 import UserGarden from "./components/UserGarden";//               4MMML
-import { SecretPage } from "./components/Secr";//                     MMMMM.                xf     
+import {SecretPage} from "./components/Secr";//                     MMMMM.                xf     
 import Tutorial from "./components/Tutorial";//   .              "MMMMM               .MM-     
 import Stats from "./components/Stats";//          Mh..          +MMMMMM            .MMMM                                   
 import ReactGA from 'react-ga';//                  .MMM.         .MMMMML.          MMMMMh      
@@ -295,6 +295,7 @@ class App extends Component {
             <Route path="/callback" component={SCCallback} />
             <Route path="/trending" component={Trending} />
             <Route path="/home" component={HomePage} />
+            <Route path="/secret" component={SecretPage} />
 
           </div>
           <div className="layout-mask"></div>
