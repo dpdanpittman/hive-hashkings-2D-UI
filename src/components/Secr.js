@@ -460,7 +460,8 @@ let buttonLabel = "Purchase";
 if (isSubmitting) buttonLabel = "Purchasing";
 if (!username) buttonLabel = "Please Sign in";
 
-
+if (!isDesktop) {
+  if (username) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
@@ -669,7 +670,228 @@ if (!username) buttonLabel = "Please Sign in";
       </Container>
     </div>
     </Parallax>
-  );
-
+    );
+    } else {
+      return (
+        <Redirect to='/login'/>
+      );
+    }
+    } else {
+    if (username) {
+    return (
+      <Parallax blur={1} bgImage={image1} strength={500}>
+      <div className={classes.root}>
+  
+        <center>
+          <img src="https://i.imgur.com/gqI9Gdu.jpg"></img>
+        </center>
+      
+        <Container fixed>
+        <Grid container spacing={3}>
+        <Grid item xs> 
+        <br/>
+        <br/>
+        <Card className={classes.card} raised={true}>
+        <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/zLl260v.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>Asia Bundle ({asiaBundles} Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                  This bundle includes 1 plot in Asia, 1 random Asian Landrace Seed and a level 1 Water Tower.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAsiaPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitAsia}
+                />
+              </CardContent>
+            </Card>
+        </Grid>
+  
+          <Grid item xs>
+          <Card className={classes.card} raised={true}>
+          <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/iWJFmeF.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>Africa Bundle ({africaBundles} Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                This bundle includes 1 plot in Africa, 1 Random African Landrace Seed and a level 1 Water Tower.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitAfrica}
+                />
+              </CardContent>
+            </Card>
+            <br/>
+          </Grid>
+  
+          <Grid item xs>
+          <Card className={classes.card} raised={true}>
+          <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/tr2MCTE.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>Jamaica Bundle ({jamaicaBundles} Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                This bundle includes 1 plot in Jamaica, 1 Random Jamaican Landrace Seed and a level 1 Water Tower.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitJamaica}
+                />
+              </CardContent>
+            </Card>
+            <br/>
+          </Grid>
+          </Grid>
+          
+          <Grid container spacing={3}>
+        <Grid item xs> 
+        <Card className={classes.card} raised={true}>
+        <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/JaXNvex.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>South America Bundle ({southAmericaBundles} Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                This bundle includes 1 plot in South America, 1 Random South American Landrace Seed and a level 1 Water Tower.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitSouthAmerica}
+                />
+              </CardContent>
+            </Card>
+        </Grid>
+  
+          <Grid item xs>
+          <Card className={classes.card} raised={true}>
+          <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/sh8hqAi.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>Mexico Bundle ({mexicoBundles}  Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                This bundle includes 1 plot in Mexico, 1 Random Mexican Landrace Seed and a level 1 Water Tower.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedMexicoPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitMexico}
+                />
+              </CardContent>
+            </Card>
+          </Grid>
+  
+          <Grid item xs>
+          <Card className={classes.card} raised={true}>
+          <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/dtRKgF0.png"
+                title="Market"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                <font color="DFB17B" className={classes.font}>Afghanistan Bundle ({afghanistanBundles} Available)</font>
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}>
+                  This seed is part of the first round of seeds and extremely rare. 
+                  It can be used to make beta seeds.
+                </font>
+                </Typography>
+                <br/>
+                <br/>
+                <Typography variant="body2" color="textSecondary" component="p">
+                <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfghanistanPrices} HIVE</font>
+                </Typography>
+                <br/>
+                <Button
+                disabled={isSubmitting || !username}
+                label={buttonLabel}
+                onClick={handleSubmitAfghanistan}
+                />
+              </CardContent>
+            </Card>
+          </Grid>
+      </Grid>
+        
+        <br/>
+        </Container>
+      </div>
+      </Parallax>
+      );
+      } else {
+        return (
+          <Redirect to='/login'/>
+          );
+        }
+    }
 };
 
