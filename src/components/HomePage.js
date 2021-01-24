@@ -739,7 +739,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username || (seedAfricarices < 1)}
+                disabled={isSubmitting || !username || (seedAfricaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAfrica}
                 />
