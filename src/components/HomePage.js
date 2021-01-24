@@ -475,8 +475,8 @@ if (!isDesktop) {
       <br/>
       <br/>
       <Grid item xs> 
-      <Typography gutterBottom variant="h1" component="h1">
-        <font color="DFB17B" className={classes.font}><b>Doing Maintenance Please Check Back in 2 hours</b></font>
+      <Typography gutterBottom variant="h1" component="h1" align="center">
+        <font color="DFB17B" className={classes.font}><b>Performing Maintenance Please Check Back in 2 hours</b></font>
       </Typography>
       </Grid>
       <br/>
@@ -694,8 +694,8 @@ if (!isDesktop) {
       <br/>
       <br/>
       <Grid item xs> 
-      <Typography gutterBottom variant="h1" component="h1">
-        <font color="DFB17B" className={classes.font}><b>Doing Maintenance Please Check Back in 2 hours</b></font>
+      <Typography gutterBottom variant="h1" component="h1" align="center">
+        <font color="DFB17B" className={classes.font}><b>Performing Maintenance Please Check Back in 2 hours</b></font>
       </Typography>
       </Grid>
       </Grid>
