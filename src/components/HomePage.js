@@ -481,7 +481,7 @@ if (!isDesktop) {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-              <font color="DFB17B" className={classes.font}>Asia Bundle</font>
+              <font color="DFB17B" className={classes.font}>Asia Bundle ({asiaBundles} Available)</font>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
@@ -494,6 +494,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
+              <Button
+              disabled={isSubmitting || !username || (seedAsiaPrices < 1)}
+              label={buttonLabel}
+              onClick={handleSubmitAsia}
+              />
             </CardContent>
           </Card>
       </Grid>
@@ -521,7 +526,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username}
+              disabled={isSubmitting || !username || (seedAfricaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitAfrica}
               />
@@ -553,7 +558,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username}
+              disabled={isSubmitting || !username || (seedJamaicaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitJamaica}
               />
@@ -587,7 +592,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username}
+              disabled={isSubmitting || !username || (seedSouthAmericaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitSouthAmerica}
               />
@@ -618,7 +623,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username}
+              disabled={isSubmitting || !username || (seedMexicoPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitMexico}
               />
@@ -649,7 +654,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username}
+              disabled={isSubmitting || !username || (seedAfghanistanPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitAfghanistan}
               />
@@ -703,7 +708,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username || (seedAsiaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAsia}
                 />
@@ -734,7 +739,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username || (seedAfricarices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAfrica}
                 />
@@ -766,7 +771,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username || (seedJamaicaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitJamaica}
                 />
@@ -800,7 +805,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username  || (seedSouthAmericaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitSouthAmerica}
                 />
@@ -831,7 +836,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username  || (seedMexicoPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitMexico}
                 />
@@ -862,7 +867,7 @@ if (!isDesktop) {
                 </Typography>
                 <br/>
                 <Button
-                disabled={isSubmitting || !username}
+                disabled={isSubmitting || !username || (seedAfghanistanPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAfghanistan}
                 />
