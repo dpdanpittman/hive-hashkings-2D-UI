@@ -481,7 +481,7 @@ if (!isDesktop) {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-              <font color="DFB17B" className={classes.font}>Asia Bundle ({asiaBundles} Available)</font>
+              <font color="DFB17B" className={classes.font}>Asia Bundle</font>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
               <font color="DFB17B" className={classes.font}>
@@ -491,7 +491,7 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAsiaPrices} HIVE</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
             </CardContent>
