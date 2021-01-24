@@ -472,17 +472,6 @@ if (!isDesktop) {
     
       <Container fixed>
       <Grid container spacing={3}>
-      <br/>
-      <br/>
-      <Grid item xs> 
-      <Typography gutterBottom variant="h1" component="h1" align="center">
-        <font color="DFB17B" className={classes.font}><b>Performing Maintenance Please Check Back in 2 hours</b></font>
-      </Typography>
-      </Grid>
-      <br/>
-      <br/>
-      </Grid>
-      <Grid container spacing={3}>
       <Grid item xs> 
       <Card className={classes.card} raised={true}>
       <CardMedia
@@ -531,11 +520,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices} HIVE</font>
               </Typography>
               <br/>
-              {/*<Button
+              <Button
               disabled={isSubmitting || !username || (seedAfricaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitAfrica}
-              />*/}
+              />
             </CardContent>
           </Card>
           <br/>
@@ -563,11 +552,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices} HIVE</font>
               </Typography>
               <br/>
-              {/*<Button
+              <Button
               disabled={isSubmitting || !username || (seedJamaicaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitJamaica}
-              />*/}
+              />
             </CardContent>
           </Card>
           <br/>
@@ -597,11 +586,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices} HIVE</font>
               </Typography>
               <br/>
-              {/*<Button
+              <Button
               disabled={isSubmitting || !username || (seedSouthAmericaPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitSouthAmerica}
-              />*/}
+              />
             </CardContent>
           </Card>
       </Grid>
@@ -628,11 +617,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedMexicoPrices} HIVE</font>
               </Typography>
               <br/>
-              {/*<Button
+              <Button
               disabled={isSubmitting || !username || (seedMexicoPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitMexico}
-              />*/}
+              />
             </CardContent>
           </Card>
         </Grid>
@@ -659,11 +648,11 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfghanistanPrices} HIVE</font>
               </Typography>
               <br/>
-              {/*<Button
+              <Button
               disabled={isSubmitting || !username || (seedAfghanistanPrices < 1)}
               label={buttonLabel}
               onClick={handleSubmitAfghanistan}
-              />*/}
+              />
             </CardContent>
           </Card>
         </Grid>
@@ -691,15 +680,6 @@ if (!isDesktop) {
       
         <Container fixed>
         <Grid container spacing={3}>
-      <br/>
-      <br/>
-      <Grid item xs> 
-      <Typography gutterBottom variant="h1" component="h1" align="center">
-        <font color="DFB17B" className={classes.font}><b>Performing Maintenance Please Check Back in 2 hours</b></font>
-      </Typography>
-      </Grid>
-      </Grid>
-        <Grid container spacing={3}>
         <Grid item xs> 
         <Card className={classes.card} raised={true}>
         <CardMedia
@@ -722,11 +702,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAsiaPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username || (seedAsiaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAsia}
-                />*/}
+                />
               </CardContent>
             </Card>
         </Grid>
@@ -753,11 +733,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username || (seedAfricaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAfrica}
-                />*/}
+                />
               </CardContent>
             </Card>
             <br/>
@@ -785,11 +765,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username || (seedJamaicaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitJamaica}
-                />*/}
+                />
               </CardContent>
             </Card>
             <br/>
@@ -819,11 +799,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username  || (seedSouthAmericaPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitSouthAmerica}
-                />*/}
+                />
               </CardContent>
             </Card>
         </Grid>
@@ -850,11 +830,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedMexicoPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username  || (seedMexicoPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitMexico}
-                />*/}
+                />
               </CardContent>
             </Card>
           </Grid>
@@ -881,11 +861,11 @@ if (!isDesktop) {
                 <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfghanistanPrices} HIVE</font>
                 </Typography>
                 <br/>
-                {/*<Button
+                <Button
                 disabled={isSubmitting || !username || (seedAfghanistanPrices < 1)}
                 label={buttonLabel}
                 onClick={handleSubmitAfghanistan}
-                />*/}
+                />
               </CardContent>
             </Card>
           </Grid>
