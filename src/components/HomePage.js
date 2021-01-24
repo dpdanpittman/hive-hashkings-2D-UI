@@ -494,11 +494,6 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
-              <Button
-              disabled={isSubmitting || !username || (seedAsiaPrices < 1)}
-              label={buttonLabel}
-              onClick={handleSubmitAsia}
-              />
             </CardContent>
           </Card>
       </Grid>
