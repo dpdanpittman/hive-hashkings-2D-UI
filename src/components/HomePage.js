@@ -502,7 +502,7 @@ if (!isDesktop) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/iWJFmeF.png"
+              image="https://i.imgur.com/419kFeb.png"
               title="Market"
             />
             <CardContent>
@@ -843,7 +843,7 @@ if (!isDesktop) {
           <Card className={classes.card} raised={true}>
           <CardMedia
                 className={classes.media}
-                image="https://i.imgur.com/dtRKgF0.png"
+                image="https://i.imgur.com/yAKU4iq.png"
                 title="Market"
               />
               <CardContent>
