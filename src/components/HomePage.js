@@ -476,7 +476,7 @@ if (!isDesktop) {
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/zLl260v.png"
+              image="https://i.imgur.com/QcC3mcD.png"
               title="Market"
             />
             <CardContent>
@@ -502,7 +502,7 @@ if (!isDesktop) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/419kFeb.png"
+              image="https://i.imgur.com/dZldDKG.png"
               title="Market"
             />
             <CardContent>
@@ -534,7 +534,7 @@ if (!isDesktop) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/tr2MCTE.png"
+              image="https://i.imgur.com/I8QzIQy.png"
               title="Market"
             />
             <CardContent>
@@ -568,7 +568,7 @@ if (!isDesktop) {
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/JaXNvex.png"
+              image="https://i.imgur.com/i4z0B31.png"
               title="Market"
             />
             <CardContent>
@@ -599,7 +599,7 @@ if (!isDesktop) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/sh8hqAi.png"
+              image="https://i.imgur.com/OlrsNST.png"
               title="Market"
             />
             <CardContent>
@@ -630,7 +630,7 @@ if (!isDesktop) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/dtRKgF0.png"
+              image="https://i.imgur.com/QcMzQSC.png"
               title="Market"
             />
             <CardContent>
