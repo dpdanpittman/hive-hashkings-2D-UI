@@ -552,11 +552,6 @@ if (!isDesktop) {
               <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices} HIVE</font>
               </Typography>
               <br/>
-              <Button
-              disabled={isSubmitting || !username || (seedJamaicaPrices < 1)}
-              label={buttonLabel}
-              onClick={handleSubmitJamaica}
-              />
             </CardContent>
           </Card>
           <br/>
