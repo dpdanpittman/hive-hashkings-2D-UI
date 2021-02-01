@@ -491,7 +491,7 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b></font><font color="red" className={classes.font}>SOLD OUT</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
             </CardContent>
@@ -517,7 +517,7 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b></font><font color="red" className={classes.font}>SOLD OUT</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
@@ -549,7 +549,7 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedJamaicaPrices} HIVE</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font><font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
             </CardContent>
