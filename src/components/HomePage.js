@@ -106,7 +106,7 @@ const hasHiveKeychain = useHiveKeychain();
 
 const loadPriceData = async () => {
     
-  const urlAPI = 'http://45.77.121.122:3000/';
+  const urlAPI = 'https://hashkings-api.herokuapp.com/';
   
   const response = await fetch(urlAPI);
   const pricedata = await response.json();
