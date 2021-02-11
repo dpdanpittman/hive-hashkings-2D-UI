@@ -2,7 +2,7 @@ import axios from "axios";
 import { format as formatTimeAgo } from "timeago.js";
 
 export class HashkingsAPI {
-  baseUrl = "http://45.77.121.122:3000"; // main api
+  baseUrl = "http://45.77.121.122:3000/"; // main api
   
   get(suffix) {
     return axios.get(this.baseUrl + suffix).then(res => res.data);
