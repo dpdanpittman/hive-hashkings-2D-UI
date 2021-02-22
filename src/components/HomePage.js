@@ -517,14 +517,9 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedAfricaPrices} HIVE</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font><font color="red" className={classes.font}>SOLD OUT</font>
               </Typography>
               <br/>
-              <Button
-              disabled={isSubmitting || !username || (seedAfricaPrices < 1)}
-              label={buttonLabel}
-              onClick={handleSubmitAfrica}
-              />
             </CardContent>
           </Card>
           <br/>
