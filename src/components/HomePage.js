@@ -467,7 +467,7 @@ if (!isDesktop) {
     <div className={classes.root}>
 
       <center>
-        <img src="https://i.imgur.com/TSbfpc9.png"></img>
+        <img src="https://i.imgur.com/7tXYoPk.png"></img>
       </center>
     
 
@@ -486,7 +486,7 @@ if (!isDesktop) {
       <div className={classes.root}>
   
         <center>
-          <img src="https://i.imgur.com/TSbfpc9.png"></img>
+          <img src="https://i.imgur.com/7tXYoPk.png"></img>
         </center>
       
       </div>
