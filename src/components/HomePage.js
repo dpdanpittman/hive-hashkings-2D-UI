@@ -148,20 +148,7 @@ const [gardens, setGardens] = useState([]);
 
 const {steemConnectAPI} = useContext(StateContext);
 
-useEffect(() => {
-  if (!isOpen) {
-    setGardens([]);
-    setIsSubmitting(false);
-  }
-}, [isOpen]);
 
-const watered = error => {
-  if (error) {
-    setIsSubmitting(false);
-  } else {
-    toggleModal();
-  }
-};
 
 const handleSubmitAsia = async e => {
   e.preventDefault();
@@ -434,8 +421,7 @@ const handleSubmitWater = () => {
       [],
       [username], 
       custom_json_id,
-      custom_JSON,
-      watered
+      custom_JSON
     );
   }
 };
@@ -451,8 +437,7 @@ const handleSubmitAvatar = () => {
       [],
       [username], 
       custom_json_id,
-      custom_JSON,
-      watered
+      custom_JSON
     );
   }
 };
@@ -468,8 +453,7 @@ const handleSubmitBuds = () => {
       [],
       [username], 
       custom_json_id,
-      custom_JSON,
-      watered
+      custom_JSON
     );
   }
 };
