@@ -144,6 +144,26 @@ useEffect(() => {
   loadPriceData();
 }, []);
 
+const [gardens, setGardens] = useState([]);
+
+const [isSubmitting, setIsSubmitting] = useState(false);
+const {steemConnectAPI} = useContext(StateContext);
+
+useEffect(() => {
+  if (!isOpen) {
+    setGardens([]);
+    setIsSubmitting(false);
+  }
+}, [isOpen]);
+
+const watered = error => {
+  if (error) {
+    setIsSubmitting(false);
+  } else {
+    toggleModal();
+  }
+};
+
 const handleSubmitAsia = async e => {
   e.preventDefault();
   if (username) {
