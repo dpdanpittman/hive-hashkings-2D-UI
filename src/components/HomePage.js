@@ -404,6 +404,57 @@ const handleSubmitMexico = async e => {
   }
 };
 
+const handleSubmitWater = () => {
+  if (username && gardens.length > 0) {
+    setIsSubmitting(true);
+
+    const custom_json_id = "qwoyn_water";
+    const custom_JSON = JSON.stringify({claiming: "water"});
+
+    steemConnectAPI.customJson(
+      [],
+      [username], 
+      custom_json_id,
+      custom_JSON,
+      watered
+    );
+  }
+};
+
+const handleSubmitAvatar = () => {
+  if (username && gardens.length > 0) {
+    setIsSubmitting(true);
+
+    const custom_json_id = "qwoyn_water";
+    const custom_JSON = JSON.stringify({claiming: "avatars"});
+
+    steemConnectAPI.customJson(
+      [],
+      [username], 
+      custom_json_id,
+      custom_JSON,
+      watered
+    );
+  }
+};
+
+const handleSubmitBuds = () => {
+  if (username && gardens.length > 0) {
+    setIsSubmitting(true);
+
+    const custom_json_id = "qwoyn_water";
+    const custom_JSON = JSON.stringify({claiming: "buds"});
+
+    steemConnectAPI.customJson(
+      [],
+      [username], 
+      custom_json_id,
+      custom_JSON,
+      watered
+    );
+  }
+};
+
 const handleSubmitSouthAmerica = async e => {
   e.preventDefault();
   if (username) {
@@ -456,8 +507,8 @@ const handleSubmitSouthAmerica = async e => {
   }
 };
 
-let buttonLabel = "Purchase";
-if (isSubmitting) buttonLabel = "Purchasing";
+let buttonLabel = "Coming Soon";
+if (isSubmitting) buttonLabel = "Claiming";
 if (!username) buttonLabel = "Please Sign in";
 
 if (!isDesktop) {
@@ -467,9 +518,106 @@ if (!isDesktop) {
     <div className={classes.root}>
 
       <center>
-        <img src="https://i.imgur.com/7tXYoPk.png"></img>
+        <img src="https://i.imgur.com/yFfJJUK.png"></img>
       </center>
     
+      <Container fixed>
+      <Grid container spacing={3}>
+      <Grid item xs> 
+      <Card className={classes.card} raised={true}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/QcC3mcD.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Avatars!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                Users who participated in the presale can claim our exclusive magical avatars here! <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>Free</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={true}
+              label={buttonLabel}
+              onClick={}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+
+      <Grid item xs> 
+      <Card className={classes.card} raised={true}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/S6myoym.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Water!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                Claim the water that will be used on the first day of gameplay if you have participated in the presale. <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={true}
+              label={buttonLabel}
+              onClick={}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+      
+      <Grid item xs> 
+      <Card className={classes.card} raised={true}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/XaaSup9.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Bud!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                To kick off seed production and the minting of MOTA users who participated can claim 1 BUD. <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
+              </Typography>
+              <br/>
+              <Button
+              disabled={true}
+              label={buttonLabel}
+              onClick={}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+
+      </Grid>
+      </Container>
 
     </div>
     </Parallax>
@@ -486,9 +634,13 @@ if (!isDesktop) {
       <div className={classes.root}>
   
         <center>
-          <img src="https://i.imgur.com/7tXYoPk.png"></img>
+          <img src="https://i.imgur.com/yFfJJUK.png"></img>
         </center>
-      
+        <br/>
+        <br/>
+        <Typography gutterBottom variant="h2" component="h2">
+          <font color="DFB17B" className={classes.font}>Please use a desktop PC or MAC to claim your goodies!</font>
+        </Typography>
       </div>
       </Parallax>
       );
