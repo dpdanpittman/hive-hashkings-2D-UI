@@ -530,7 +530,7 @@ if (!isDesktop) {
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/QcC3mcD.png"
+              image="https://i.imgur.com/JRb7bDV.png"
               title="Market"
             />
             <CardContent>
@@ -545,7 +545,7 @@ if (!isDesktop) {
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>Free</font>
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
               </Typography>
               <br/>
               <Button
