@@ -527,7 +527,7 @@ if (!isDesktop) {
       <Container fixed>
       <Grid container spacing={3}>
       <Grid item xs> 
-      <Card className={classes.card} raised={true}>
+      <Card className={classes.card} raised={true} boxShadow={0}>
       <CardMedia
               className={classes.media}
               image="https://i.imgur.com/JRb7bDV.png"
@@ -557,7 +557,7 @@ if (!isDesktop) {
       </Grid>
 
       <Grid item xs> 
-      <Card className={classes.card} raised={true}>
+      <Card className={classes.card} raised={true} boxShadow={0}>
       <CardMedia
               className={classes.media}
               image="https://i.imgur.com/S6myoym.png"
@@ -587,7 +587,7 @@ if (!isDesktop) {
       </Grid>
       
       <Grid item xs> 
-      <Card className={classes.card} raised={true}>
+      <Card className={classes.card} raised={true} boxShadow={0}>
       <CardMedia
               className={classes.media}
               image="https://i.imgur.com/XaaSup9.png"
