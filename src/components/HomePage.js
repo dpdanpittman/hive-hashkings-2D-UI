@@ -146,7 +146,6 @@ useEffect(() => {
 
 const [gardens, setGardens] = useState([]);
 
-const [isSubmitting, setIsSubmitting] = useState(false);
 const {steemConnectAPI} = useContext(StateContext);
 
 useEffect(() => {
