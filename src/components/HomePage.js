@@ -548,7 +548,6 @@ if (!isDesktop) {
               <Button
               disabled={true}
               label={buttonLabel}
-              onClick={}
               />
             </CardContent>
           </Card>
@@ -579,7 +578,6 @@ if (!isDesktop) {
               <Button
               disabled={true}
               label={buttonLabel}
-              onClick={}
               />
             </CardContent>
           </Card>
@@ -610,7 +608,6 @@ if (!isDesktop) {
               <Button
               disabled={true}
               label={buttonLabel}
-              onClick={}
               />
             </CardContent>
           </Card>
