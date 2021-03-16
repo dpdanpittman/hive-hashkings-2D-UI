@@ -519,11 +519,13 @@ if (!isDesktop) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
-
+    <br/>
+    <br/>
       <center>
         <img src="https://i.imgur.com/yFfJJUK.png"></img>
       </center>
-    
+    <br/>
+    <br/>
       <Container fixed>
       <Grid container spacing={3}>
       <Grid item xs> 
