@@ -151,7 +151,7 @@ const {steemConnectAPI} = useContext(StateContext);
 
 
 const handleSubmitWater = () => {
-  if (username && gardens.length > 0) {
+  if (username) {
     setIsSubmitting(true);
 
     const custom_json_id = "qwoyn_claim_water";
@@ -183,7 +183,7 @@ const handleSubmitAvatar = () => {
 };
 
 const handleSubmitBuds = () => {
-  if (username && gardens.length > 0) {
+  if (username) {
     setIsSubmitting(true);
 
     const custom_json_id = "qwoyn_claim_bud";
@@ -199,7 +199,7 @@ const handleSubmitBuds = () => {
 };
 
 
-let buttonLabel = "Coming Soon";
+let buttonLabel = "Claim";
 if (isSubmitting) buttonLabel = "Claiming";
 if (!username) buttonLabel = "Please Sign in";
 
