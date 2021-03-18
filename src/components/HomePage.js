@@ -80,6 +80,8 @@ const {username} = useContext(StateContext);
 const classes = useStyles();
 const isDesktop = window.innerWidth < 1000;
 const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting1, setIsSubmitting1] = useState(false);
+const [isSubmitting2, setIsSubmitting2] = useState(false);
 const image1 = "https://i.imgur.com/j2CGYh2.jpg";
 
 const [seedAsia, setSeedAsia] = useState();
@@ -168,7 +170,7 @@ const handleSubmitWater = () => {
 
 const handleSubmitAvatar = () => {
   if (username) {
-    setIsSubmitting(true);
+    setIsSubmitting1(true);
 
     const custom_json_id = "qwoyn_claim_avatar";
     const custom_JSON = JSON.stringify({claiming: "avatars"});
@@ -184,7 +186,7 @@ const handleSubmitAvatar = () => {
 
 const handleSubmitBuds = () => {
   if (username) {
-    setIsSubmitting(true);
+    setIsSubmitting2(true);
 
     const custom_json_id = "qwoyn_claim_bud";
     const custom_JSON = JSON.stringify({claiming: "buds"});
@@ -204,11 +206,11 @@ if (isSubmitting) buttonLabel1 = "Claimed";
 if (!username) buttonLabel1 = "Please Sign in";
 
 let buttonLabel2 = "Claim";
-if (isSubmitting) buttonLabel2 = "Claimed";
+if (isSubmitting1) buttonLabel2 = "Claimed";
 if (!username) buttonLabel2 = "Please Sign in";
 
 let buttonLabel3 = "Claim";
-if (isSubmitting) buttonLabel3 = "Claimed";
+if (isSubmitting2) buttonLabel3 = "Claimed";
 if (!username) buttonLabel3 = "Please Sign in";
 
 if (!isDesktop) {
