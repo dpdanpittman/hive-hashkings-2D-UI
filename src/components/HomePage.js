@@ -242,7 +242,6 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={true}
               label={buttonLabel}
               onClick={handleSubmitAvatar}
               />
