@@ -126,8 +126,6 @@ const loadPriceData = async () => {
   var mexicoBundles = pricedata.stats.supply.land.mexico;
   var southAmericaBundles = pricedata.stats.supply.land.southAmerica;
 
-  var claimedAvatar = pricedata.users[username].claimed.avatar
-
   setAsiaPrices(seedAsiaPrice);
   setAfricaPrices(seedAfricaPrice);
   setAfghanistanPrices(seedAfghanistanPrice);
