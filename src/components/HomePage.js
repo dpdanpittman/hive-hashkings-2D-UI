@@ -199,9 +199,17 @@ const handleSubmitBuds = () => {
 };
 
 
-let buttonLabel = "Claim";
-if (isSubmitting) buttonLabel = "Claiming";
-if (!username) buttonLabel = "Please Sign in";
+let buttonLabel1 = "Claim";
+if (isSubmitting) buttonLabel1 = "Claimed";
+if (!username) buttonLabel1 = "Please Sign in";
+
+let buttonLabel2 = "Claim";
+if (isSubmitting) buttonLabel2 = "Claimed";
+if (!username) buttonLabel2 = "Please Sign in";
+
+let buttonLabel3 = "Claim";
+if (isSubmitting) buttonLabel3 = "Claimed";
+if (!username) buttonLabel3 = "Please Sign in";
 
 if (!isDesktop) {
   if (username) {
@@ -240,7 +248,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              label={buttonLabel}
+              label={buttonLabel1}
               onClick={handleSubmitAvatar}
               />
             </CardContent>
@@ -270,7 +278,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              label={buttonLabel}
+              label={buttonLabel2}
               onClick={handleSubmitWater}
               />
             </CardContent>
@@ -300,7 +308,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              label={buttonLabel}
+              label={buttonLabel3}
               onClick={handleSubmitBuds}
               />
             </CardContent>
