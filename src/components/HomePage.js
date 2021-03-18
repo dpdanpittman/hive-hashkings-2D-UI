@@ -250,7 +250,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              label={buttonLabel1}
+              label={buttonLabel2}
               onClick={handleSubmitAvatar}
               />
             </CardContent>
@@ -280,7 +280,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              label={buttonLabel2}
+              label={buttonLabel1}
               onClick={handleSubmitWater}
               />
             </CardContent>
