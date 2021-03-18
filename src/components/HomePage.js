@@ -270,8 +270,8 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={true}
               label={buttonLabel}
+              onClick={handleSubmitWater}
               />
             </CardContent>
           </Card>
@@ -300,8 +300,8 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={true}
               label={buttonLabel}
+              onClick={handleSubmitBuds}
               />
             </CardContent>
           </Card>
