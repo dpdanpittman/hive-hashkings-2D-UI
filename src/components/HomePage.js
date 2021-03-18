@@ -15,6 +15,7 @@ import { Parallax } from 'react-parallax';
 import { Redirect } from 'react-router';
 import TrendingHomePage from './TrendingHomePage';
 import TutorialCard from './TutorialCard';
+import { shadows } from '@material-ui/system';
 import useHiveKeychain from "../hooks/useHiveKeychain"; 
 
 const useStyles = makeStyles(theme => ({
@@ -125,6 +126,8 @@ const loadPriceData = async () => {
   var mexicoBundles = pricedata.stats.supply.land.mexico;
   var southAmericaBundles = pricedata.stats.supply.land.southAmerica;
 
+  var claimedAvatar = pricedata.users[username].claimed.avatar
+
   setAsiaPrices(seedAsiaPrice);
   setAfricaPrices(seedAfricaPrice);
   setAfghanistanPrices(seedAfghanistanPrice);
@@ -149,272 +152,11 @@ const [gardens, setGardens] = useState([]);
 const {steemConnectAPI} = useContext(StateContext);
 
 
-
-const handleSubmitAsia = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `asia_bundle`;
-    const to = "hashkings";
-    const amount = seedAsiaPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedAsia();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
-
-const handleSubmitAfrica = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `africa_bundle`;
-    const to = "hashkings";
-    const amount = seedAfricaPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedAfrica();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
-
-const handleSubmitAfghanistan = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `afghanistan_bundle`;
-    const to = "hashkings";
-    const amount = seedAfghanistanPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedAfghanistan();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
-
-const handleSubmitJamaica = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `jamaica_bundle`;
-    const to = "hashkings";
-    const amount = seedJamaicaPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedJamaica();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
-
-const handleSubmitMexico = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `mexico_bundle`;
-    const to = "hashkings";
-    const amount = seedMexicoPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedMexico();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
-
 const handleSubmitWater = () => {
   if (username && gardens.length > 0) {
     setIsSubmitting(true);
 
-    const custom_json_id = "qwoyn_water";
+    const custom_json_id = "qwoyn_claim_water";
     const custom_JSON = JSON.stringify({claiming: "water"});
 
     steemConnectAPI.customJson(
@@ -430,7 +172,7 @@ const handleSubmitAvatar = () => {
   if (username && gardens.length > 0) {
     setIsSubmitting(true);
 
-    const custom_json_id = "qwoyn_water";
+    const custom_json_id = "qwoyn_claim_avatar";
     const custom_JSON = JSON.stringify({claiming: "avatars"});
 
     steemConnectAPI.customJson(
@@ -446,7 +188,7 @@ const handleSubmitBuds = () => {
   if (username && gardens.length > 0) {
     setIsSubmitting(true);
 
-    const custom_json_id = "qwoyn_water";
+    const custom_json_id = "qwoyn_claim_budr";
     const custom_JSON = JSON.stringify({claiming: "buds"});
 
     steemConnectAPI.customJson(
@@ -458,57 +200,6 @@ const handleSubmitBuds = () => {
   }
 };
 
-const handleSubmitSouthAmerica = async e => {
-  e.preventDefault();
-  if (username) {
-    setIsSubmitting(true);
-
-    const memo = `southamerica_bundle`;
-    const to = "hashkings";
-    const amount = seedSouthAmericaPrices.toFixed(3).toString();
-    const currency = "HIVE";
-
-    if (hasHiveKeychain()) {
-      const hive_keychain = window.hive_keychain;
-      try {
-        await new Promise((resolve, reject) => {
-          return hive_keychain.requestTransfer(
-            username,
-            to,
-            amount,
-            memo,
-            currency,
-            response => {
-              if (response.success) {
-                resolve(response);
-              } else {
-                reject();
-              }
-            },
-            true
-          );
-        });
-        setIsSubmitting(false);
-        setSeedSouthAmerica();
-      } catch {
-        setIsSubmitting(false);
-      }
-    } else {
-      window.location.href = sign(
-        "transfer",
-        {
-          to,
-          from: username,
-          amount: `${amount} ${currency}`,
-          memo
-        },
-        process.env.REACT_APP_URL
-          ? `${process.env.REACT_APP_URL}/`
-          : "https://localhost:3000/"
-      );
-    }
-  }
-};
 
 let buttonLabel = "Coming Soon";
 if (isSubmitting) buttonLabel = "Claiming";
@@ -553,6 +244,7 @@ if (!isDesktop) {
               <Button
               disabled={true}
               label={buttonLabel}
+              onClick={handleSubmitAvatar}
               />
             </CardContent>
           </Card>
