@@ -335,13 +335,104 @@ if (!isDesktop) {
       <div className={classes.root}>
   
         <center>
-          <img src="https://i.imgur.com/yFfJJUK.png"></img>
+          <img src="https://i.imgur.com/yFfJJUKs.png"></img>
         </center>
         <br/>
         <br/>
-        <Typography gutterBottom variant="h2" component="h2">
-          <font color="DFB17B" className={classes.font}>Please use a desktop PC or MAC to claim your goodies!</font>
-        </Typography>
+        <Container fixed>
+      <Grid container spacing={3}>
+      <Grid item xs> 
+      <Card className={classes.card} raised={true} boxShadow={0}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/JRb7bDV.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Avatars!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                Users who participated in the presale can claim our exclusive magical avatars here! <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
+              </Typography>
+              <br/>
+              <Button
+              label={buttonLabel2}
+              onClick={handleSubmitAvatar}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+
+      <Grid item xs> 
+      <Card className={classes.card} raised={true} boxShadow={0}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/S6myoym.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Water!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                Claim the water that will be used on the first day of gameplay if you have participated in the presale. <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
+              </Typography>
+              <br/>
+              <Button
+              label={buttonLabel1}
+              onClick={handleSubmitWater}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+      
+      <Grid item xs> 
+      <Card className={classes.card} raised={true} boxShadow={0}>
+      <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/XaaSup9.png"
+              title="Market"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+              <font color="DFB17B" className={classes.font}>Claim your Bud!</font>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}>
+                To kick off seed production and the minting of MOTA users who participated can claim 1 BUD. <u>CAN ONLY BE CLAIMED ONCE!</u>
+              </font>
+              </Typography>
+              <br/>
+              <br/>
+              <Typography variant="body2" color="textSecondary" component="p">
+              <font color="DFB17B" className={classes.font}><b>Price: </b></font> <font color="green" className={classes.font}>FREE</font>
+              </Typography>
+              <br/>
+              <Button
+              label={buttonLabel3}
+              onClick={handleSubmitBuds}
+              />
+            </CardContent>
+          </Card>
+      </Grid>
+
+      </Grid>
+      </Container>
       </div>
       </Parallax>
       );
