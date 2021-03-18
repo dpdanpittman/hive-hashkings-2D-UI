@@ -167,7 +167,7 @@ const handleSubmitWater = () => {
 };
 
 const handleSubmitAvatar = () => {
-  if (username && gardens.length > 0) {
+  if (username) {
     setIsSubmitting(true);
 
     const custom_json_id = "qwoyn_claim_avatar";
@@ -186,7 +186,7 @@ const handleSubmitBuds = () => {
   if (username && gardens.length > 0) {
     setIsSubmitting(true);
 
-    const custom_json_id = "qwoyn_claim_budr";
+    const custom_json_id = "qwoyn_claim_bud";
     const custom_JSON = JSON.stringify({claiming: "buds"});
 
     steemConnectAPI.customJson(
