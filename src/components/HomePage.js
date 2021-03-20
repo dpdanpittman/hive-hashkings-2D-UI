@@ -444,7 +444,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimStatusBud === true)}
+              disabled={isSubmitting || !username || (claimsStatusBud === true)}
               label={buttonLabel3}
               onClick={handleSubmitBuds}
               />
