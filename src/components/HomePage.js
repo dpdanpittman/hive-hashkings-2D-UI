@@ -216,14 +216,17 @@ const handleSubmitBuds = () => {
 let buttonLabel1 = "Claim";
 if (isSubmitting) buttonLabel1 = "Claimed";
 if (!username) buttonLabel1 = "Please Sign in";
+if (claimsStatusWater === true) buttonLabel1 = "Claimed";
 
 let buttonLabel2 = "Claim";
 if (isSubmitting1) buttonLabel2 = "Claimed";
 if (!username) buttonLabel2 = "Please Sign in";
+if (claimsStatusAvatar === true) buttonLabel2 = "Claimed";
 
 let buttonLabel3 = "Claim";
 if (isSubmitting2) buttonLabel3 = "Claimed";
 if (!username) buttonLabel3 = "Please Sign in";
+if (claimsStatusBud === true) buttonLabel3 = "Claimed";
 
 if (!isDesktop) {
   if (username) {
