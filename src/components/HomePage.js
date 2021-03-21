@@ -102,6 +102,8 @@ const [claimsStatusBud, setClaimStatusBud] = useState([false])
 const [claimsStatusWater, setClaimStatusWater] = useState([false])
 const [claimsStatusAvatar, setClaimStatusAvatar] = useState([false])
 
+const [claim, setClaimStatus] = useState([false])
+
 const [asiaBundles, setAsiaQuantity] = useState([0]);
 const [africaBundles, setAfricaQuantity] = useState([0]);
 const [afghanistanBundles, setAfghanistanQuantity] = useState([0]);
@@ -135,6 +137,10 @@ const loadPriceData = async () => {
   var claimStatusBud = pricedata.users[username].claimed.bud;
   var claimStatusWater = pricedata.users[username].claimed.water;
   var claimStatusAvatar = pricedata.users[username].claimed.avatar;
+
+  var amountOfBud = pricedata.users[username].hkwater;
+
+  setClaimStatus(amountOfBud);
 
   setClaimStatusBud(claimStatusBud);
   setClaimStatusWater(claimStatusWater);
@@ -265,7 +271,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusAvatar === true)}
+              disabled={isSubmitting || !username || (claimsStatusAvatar === true) || (claim === 0)}
               label={buttonLabel2}
               onClick={handleSubmitAvatar}
               />
@@ -296,7 +302,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusWater === true)}
+              disabled={isSubmitting || !username || (claimsStatusWater === true) || (claim === 0)}
               label={buttonLabel1}
               onClick={handleSubmitWater}
               />
@@ -327,7 +333,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusBud === true)}
+              disabled={isSubmitting || !username || (claimsStatusBud === true) || (claim === 0)}
               label={buttonLabel3}
               onClick={handleSubmitBuds}
               />
@@ -382,7 +388,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusAvatar === true)}
+              disabled={isSubmitting || !username || (claimsStatusAvatar === true) || (claim === 0)}
               label={buttonLabel2}
               onClick={handleSubmitAvatar}
               />
@@ -413,7 +419,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusWater === true)}
+              disabled={isSubmitting || !username || (claimsStatusWater === true) || (claim === 0)}
               label={buttonLabel1}
               onClick={handleSubmitWater}
               />
@@ -444,7 +450,7 @@ if (!isDesktop) {
               </Typography>
               <br/>
               <Button
-              disabled={isSubmitting || !username || (claimsStatusBud === true)}
+              disabled={isSubmitting || !username || (claimsStatusBud === true) || (claim === 0)}
               label={buttonLabel3}
               onClick={handleSubmitBuds}
               />
