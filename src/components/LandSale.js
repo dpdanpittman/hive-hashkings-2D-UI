@@ -272,7 +272,7 @@ if(!username) {
       <Card className={classes.card} raised={true}>
       <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/i4z0B31.png"
               title="Market"
             />
             <CardContent>
@@ -303,7 +303,7 @@ if(!username) {
         <Card className={classes.card} raised={true}>
         <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/ymrzJc9.png"
+              image="https://i.imgur.com/OlrsNST.png"
               title="Market"
             />
             <CardContent>
