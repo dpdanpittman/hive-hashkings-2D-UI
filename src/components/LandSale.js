@@ -81,7 +81,7 @@ const classes = useStyles();
 const isDesktop = window.innerWidth < 1000;
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [isSubmitting1, setIsSubmitting1] = useState(false);
-const image1 = "https://i.imgur.com/j2CGYh2.jpg";
+const image1 = "https://i.imgur.com/5SKbll8.png";
 
 const [seedAsia, setSeedAsia] = useState();
 const [seedAfrica, setSeedAfrica] = useState();
@@ -262,7 +262,8 @@ if(!username) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
-    
+    <br/>
+    <br/>
       <Container fixed>        
       <Grid container spacing={3}>
 
