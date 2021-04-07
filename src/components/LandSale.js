@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     maxWidth: 'auto',
-    backgroundColor: "transparent",
+    backgroundColor: "#095938",
   },
   media: {
     height: 300,
