@@ -258,7 +258,6 @@ if (isSubmitting1) buttonLabel1 = "Purchasing";
 
 if (!username) buttonLabel = "Please Sign in";
 
-if(!username) {
   return(
     <Parallax blur={1} bgImage={image1} strength={500}>
     <div className={classes.root}>
@@ -362,10 +361,6 @@ if(!username) {
     <br/>
     </Parallax>
   );
-} else {
-  return (
-    <Redirect to='/login'/>
-    );
-  }
+
 };
 
