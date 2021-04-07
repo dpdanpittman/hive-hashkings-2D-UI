@@ -10,7 +10,7 @@ import {  FarmTopbarIcon,
           StoreIcon, 
           InformationIcon, 
           FarmIcon, 
-          TutorialIcon,
+          SaleIcon,
           FunditionIcon,
           PatreonIcon, 
           LandIcon, 
@@ -112,6 +112,22 @@ export default function DesktopTopbar(){
             </a>
             </HtmlTooltip>
             </Grid> 
+            
+            <Grid item xs={1}>
+            <HtmlTooltip
+              title={
+                <React.Fragment>
+                  <Typography color="error" className={classes.font}>Land Sale</Typography>
+                </React.Fragment>
+              }
+              placement="top"
+              TransitionComponent={Zoom}
+              >
+            <IconButton className="layout-menu-button" component={Link1} to="/land-sale">
+            <SaleIcon />
+            </IconButton>
+            </HtmlTooltip>
+            </Grid>
                         
         </Grid>
     </Grid>
