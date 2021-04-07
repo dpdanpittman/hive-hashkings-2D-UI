@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent",
   },
   media: {
-    height: 140,
+    height: 300,
     width: 270,
   },
   mediaTwo: {
@@ -117,8 +117,8 @@ const loadPriceData = async () => {
   var seedAfricaPrice = pricedata.stats.prices.land.price;
   var seedAfghanistanPrice = pricedata.stats.prices.land.price;
   var seedJamaicaPrice = pricedata.stats.prices.land.price;
-  var seedMexicoPrice = pricedata.stats.prices.land.price;
-  var seedSouthAmericaPrice = pricedata.stats.prices.land.price;
+  var seedMexicoPrice = pricedata.stats.prices.land.mexico.price;
+  var seedSouthAmericaPrice = pricedata.stats.prices.land.southAmerica.price;
 
   var asiaBundles = pricedata.stats.supply.land.asia;
   var africaBundles = pricedata.stats.supply.land.africa;
@@ -276,17 +276,17 @@ if (!username) buttonLabel = "Please Sign in";
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-              <font color="DFB17B" className={classes.font}>South America Plot ({southAmericaBundles} Available)</font>
+              <font color="black" className={classes.font}>South America Plot ({southAmericaBundles} Available)</font>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}>
+              <font color="black" className={classes.font}>
               Purchase 1 plot NFT in South America.
               </font>
               </Typography>
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices} HIVE</font>
+              <font color="black" className={classes.font}><b>Price: </b> {seedSouthAmericaPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
@@ -307,17 +307,17 @@ if (!username) buttonLabel = "Please Sign in";
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-              <font color="DFB17B" className={classes.font}>Mexico Plot ({mexicoBundles}  Available)</font>
+              <font color="black" className={classes.font}>Mexico Plot ({mexicoBundles}  Available)</font>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}>
+              <font color="black" className={classes.font}>
               Purchase 1 plot NFT in Mexico.
               </font>
               </Typography>
               <br/>
               <br/>
               <Typography variant="body2" color="textSecondary" component="p">
-              <font color="DFB17B" className={classes.font}><b>Price: </b> {seedMexicoPrices} HIVE</font>
+              <font color="black" className={classes.font}><b>Price: </b> {seedMexicoPrices} HIVE</font>
               </Typography>
               <br/>
               <Button
