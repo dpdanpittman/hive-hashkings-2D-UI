@@ -151,7 +151,7 @@ const handleSubmitMexico = async e => {
   if (username) {
     setIsSubmitting(true);
 
-    const memo = `mexico_bundle`;
+    const memo = `mexico`;
     const to = "hashkings";
     const amount = seedMexicoPrices.toFixed(3).toString();
     const currency = "HIVE";
@@ -203,7 +203,7 @@ const handleSubmitSouthAmerica = async e => {
   if (username) {
     setIsSubmitting1(true);
 
-    const memo = `southamerica_bundle`;
+    const memo = `southAmerica`;
     const to = "hashkings";
     const amount = seedSouthAmericaPrices.toFixed(3).toString();
     const currency = "HIVE";
