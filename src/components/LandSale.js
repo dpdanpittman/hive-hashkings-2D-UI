@@ -264,6 +264,7 @@ if(!username) {
     <div className={classes.root}>
     <br/>
     <br/>
+    <br/>
       <Container fixed>        
       <Grid container spacing={3}>
 
@@ -335,6 +336,30 @@ if(!username) {
       <br/>
       </Container>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     </Parallax>
   );
 } else {
