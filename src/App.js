@@ -13,6 +13,7 @@ import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {TwitchStreams} from './components/TwitchStreams.js';
 import { BoardMemberApp } from "./components/BoardMemberApp";
 import { HomePage } from "./components/HomePage.js";
+import { LandSale } from "./components/LandSale.js";
 
 import { MazariSharif } from "./components/seeds/MazariSharif";
 import { PanamaRed } from "./components/seeds/PanamaRed";
@@ -292,6 +293,7 @@ class App extends Component {
           <div className="layout-main">
             <Route path="/login" component={LoginPage} />
             <Route path="/" exact component={HomePage} />
+            <Route path="/land-sale" exact component={LandSale} />
             <Route path="/callback" component={SCCallback} />
             <Route path="/trending" component={Trending} />
             <Route path="/home" component={HomePage} />
