@@ -18,7 +18,7 @@
     "axios": ">=0.19.0",
     "babel-polyfill": "6.26.0",
     "bootstrap": "^3.4.1",
-    "chart.js": "2.7.3",
+    "chart.js": "2.9.4",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
     "ddos": "^0.2.1",
